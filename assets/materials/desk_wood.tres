@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfdeskwood01"]
+
+[resource]
+resource_name = "desk_wood"
+albedo_color = Color(0.239, 0.149, 0.231, 1.0)
+metallic = 0.05
+roughness = 0.55
+clearcoat_enabled = true
+clearcoat = 0.2

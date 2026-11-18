@@ -1,0 +1,50 @@
+{
+  "timelines": {
+    "A": {
+      "name": "Linha do Tempo A — O Silêncio Permanece",
+      "description": "Rabecca investiga superficialmente ou afasta as colegas com acusações precipitadas. Ninguém quebra a barreira do silêncio a tempo.",
+      "requirement_clues": 1,
+      "requirement_trust": 0
+    },
+    "B": {
+      "name": "Linha do Tempo B — Conflitos Expostos",
+      "description": "Rabecca descobre as mentiras e confronta as garotas, mas sem acolhimento emocional. A verdade vem à tona com dor e novas intrigas.",
+      "requirement_clues": 3,
+      "requirement_trust": 20
+    },
+    "C": {
+      "name": "Linha do Tempo C — Acolhimento e Verdade",
+      "description": "Ao conectar as pistas emocionais (o bilhete, a foto antiga e a confissão de Sophia), Rabecca consegue desarmar as defesas de Valentina e reunir apoio autêntico para Clara antes do colapso.",
+      "requirement_clues": 4,
+      "requirement_trust": 45
+    }
+  },
+  "initial_timeline_state": {
+    "timeline": "TIMELINE_INITIAL",
+    "date_str": "SEGUNDA-FEIRA — 14 DE OUTUBRO",
+    "time_str": "14:30",
+    "day_index": 1,
+    "hour": 14,
+    "minute": 30
+  },
+  "milestones": [
+    {
+      "id": "rewind_arrival",
+      "name": "Despertar no Corredor",
+      "description": "Rabecca desperta no corredor central da Saint Claire semanas antes da tragédia.",
+      "auto_diary": "Voltei no tempo. O ar cheira a madeira encerada e chuva lá fora. O sinal da escola acabou de bater. Eu preciso encontrar pistas antes que seja tarde."
+    },
+    {
+      "id": "first_clue_found",
+      "name": "Primeira Pista",
+      "description": "O primeiro indício da dor oculta é descoberto.",
+      "auto_diary": "Encontrei algo que ninguém queria que fosse visto. As aparências desta escola estão começando a ruir."
+    },
+    {
+      "id": "breakthrough_discovered",
+      "name": "Ponto de Virada",
+      "description": "As conexões entre Sophia, Valentina e o bilhete de Clara foram compreendidas.",
+      "auto_diary": "Agora eu vejo o quadro completo. O lema 'meninas apoiam meninas' era um biombo para não verem o sofrimento da Clara. Mas desta vez, haverá quem escute."
+    }
+  ]
+}

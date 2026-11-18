@@ -1,0 +1,366 @@
+{
+  "timelines": {
+    "A": {
+      "name": "Academia Saint Claire — Dia Escolar",
+      "description": "Rebecca explora a escola, cumpre suas missões e observa os sinais ao redor de Melissa."
+    }
+  },
+  "environments": {
+    "classroom": {
+      "id": "classroom",
+      "name": "Sala de Aula 2-B",
+      "time": "08:15",
+      "description": "A sala de aula matinal da turma de Rebecca. Carteiras alinhadas de carvalho e murais com o lema da escola.",
+      "ambience": "Sons distantes de cadernos sendo abertos e luz suave pelas janelas",
+      "objects": [
+        {
+          "id": "rebecca_desk",
+          "name": "Mesa de Rebecca",
+          "action": "EXAMINAR",
+          "icon": "desk",
+          "x": 74,
+          "y": 78,
+          "narrative": "Sua pasta de anotações e os relatórios organizados que devem ser entregues para a Sra. Paola."
+        },
+        {
+          "id": "notice_board",
+          "name": "Mural 'Meninas Apoiam Meninas'",
+          "action": "OBSERVAR",
+          "icon": "bulletin",
+          "x": 84,
+          "y": 42,
+          "clueId": "student_guide",
+          "narrative": "O cartaz reluzente da escola: 'Meninas apoiam meninas'. Uma frase bonita que nem sempre reflete o que acontece nas entrelinhas."
+        }
+      ],
+      "characters": [
+        {
+          "id": "clara",
+          "name": "Clara",
+          "x": 52,
+          "y": 55,
+          "dialogueId": "m1_sam_intro"
+        }
+      ]
+    },
+    "hallway": {
+      "id": "hallway",
+      "name": "Corredor das Alunas (Piso 2)",
+      "time": "08:30",
+      "description": "Corredor nobre com armários de mogno escuro, vitrais coloridos e murais informativos.",
+      "ambience": "Passos suaves ecoando pelo piso polido",
+      "objects": [
+        {
+          "id": "trophy_case",
+          "name": "Vitrine de Honra",
+          "action": "OBSERVAR",
+          "icon": "trophy",
+          "x": 46,
+          "y": 36,
+          "narrative": "Troféus e fotografias das alunas de destaque da Saint Claire."
+        },
+        {
+          "id": "crumpled_paper_hall",
+          "name": "Papel Amassado no Chão",
+          "action": "INVESTIGAR",
+          "icon": "note",
+          "x": 36,
+          "y": 62,
+          "clueId": "torn_note",
+          "narrative": "Um bilhete amassado próximo aos armários com frases ásperas e humilhantes sem identificação."
+        }
+      ],
+      "characters": [
+        {
+          "id": "melissa",
+          "name": "Melissa",
+          "x": 76,
+          "y": 62,
+          "dialogueId": "m1_melissa_hallway"
+        },
+        {
+          "id": "sam",
+          "name": "Sam",
+          "x": 56,
+          "y": 58,
+          "dialogueId": "m4_sam_hallway"
+        },
+        {
+          "id": "clara",
+          "name": "Clara",
+          "x": 24,
+          "y": 60,
+          "dialogueId": "m4_deliver_sam"
+        }
+      ]
+    },
+    "literature_room": {
+      "id": "literature_room",
+      "name": "Biblioteca & Sala de Literatura",
+      "time": "08:45",
+      "description": "Ambiente tranquilo com estantes altas de livros, mesas de leitura e luz âmbar.",
+      "ambience": "Páginas virando em sussurros tranquilos",
+      "objects": [
+        {
+          "id": "teacher_desk_lit",
+          "name": "Mesa da Professora",
+          "action": "ENTREGAR",
+          "icon": "desk",
+          "x": 16,
+          "y": 66,
+          "narrative": "A mesa onde a Professora organiza as tarefas curriculares e os diários da escola."
+        },
+        {
+          "id": "blue_notebook_lit",
+          "name": "Caderno de Literatura Azul",
+          "action": "INVESTIGAR",
+          "icon": "note",
+          "x": 62,
+          "y": 68,
+          "clueId": "blue_literature_notebook",
+          "narrative": "O caderno de literatura azul deixado sobre a mesa central. Contém anotações importantes de poesia e textos para o seminário da turma."
+        }
+      ],
+      "characters": [
+        {
+          "id": "professora",
+          "name": "Professora",
+          "x": 76,
+          "y": 50,
+          "dialogueId": "m1_paola_delivery"
+        },
+        {
+          "id": "sophia",
+          "name": "Sophia",
+          "x": 42,
+          "y": 72,
+          "dialogueId": "m1_sophia_library"
+        },
+        {
+          "id": "melissa",
+          "name": "Melissa",
+          "x": 42,
+          "y": 72,
+          "dialogueId": "m2_melissa_scattered"
+        }
+      ]
+    },
+    "art_room": {
+      "id": "art_room",
+      "name": "Ateliê de Artes",
+      "time": "09:30",
+      "description": "Cavaletes com pinturas a óleo, cartazes em confecção e caixas de materiais de artesanato.",
+      "ambience": "Aroma característico de tinta e tranquilidade artística",
+      "objects": [
+        {
+          "id": "paint_boxes",
+          "name": "Caixa de Tintas do Evento",
+          "action": "COLETAR",
+          "icon": "item",
+          "x": 68,
+          "y": 52,
+          "narrative": "Um conjunto de tintas e pincéis reservados para os cartazes da semana cultural."
+        }
+      ],
+      "characters": [
+        {
+          "id": "sophia",
+          "name": "Sophia",
+          "x": 40,
+          "y": 58,
+          "dialogueId": "m3_chloe_art"
+        }
+      ]
+    },
+    "student_council": {
+      "id": "student_council",
+      "name": "Gabinete do Conselho & Orientação",
+      "time": "10:15",
+      "description": "Espaço reservado para a organização estudantil e orientações da professora Paola.",
+      "ambience": "Móveis elegantes e atmosfera solene",
+      "objects": [
+        {
+          "id": "council_desk",
+          "name": "Mesa de Reuniões",
+          "action": "EXAMINAR",
+          "icon": "desk",
+          "x": 45,
+          "y": 55,
+          "narrative": "Listas de alunos e cronogramas de eventos escolares dispostos com precisão."
+        }
+      ],
+      "characters": [
+        {
+          "id": "clara",
+          "name": "Clara",
+          "x": 65,
+          "y": 55,
+          "dialogueId": "m3_madison_council"
+        },
+        {
+          "id": "professora",
+          "name": "Professora",
+          "x": 30,
+          "y": 55,
+          "dialogueId": "m8_paola_report"
+        }
+      ]
+    },
+    "science_lab": {
+      "id": "science_lab",
+      "name": "Laboratório de Ciências",
+      "time": "11:00",
+      "description": "Bancadas com vidrarias, microscópios e a lousa de experimentos da aula prática.",
+      "ambience": "Clima de aula e o leve ruído de recipientes de vidro",
+      "objects": [
+        {
+          "id": "group_sheet_obj",
+          "name": "Prancheta de Grupos",
+          "action": "EXAMINAR",
+          "icon": "book",
+          "x": 28,
+          "y": 40,
+          "clueId": "group_sheet",
+          "narrative": "A lista de duplas onde o nome de Melissa está isolado no final da folha."
+        }
+      ],
+      "characters": [
+        {
+          "id": "clara",
+          "name": "Clara",
+          "x": 68,
+          "y": 58,
+          "dialogueId": "m5_lab_conflict"
+        },
+        {
+          "id": "sophia",
+          "name": "Sophia",
+          "x": 80,
+          "y": 58,
+          "dialogueId": "m5_chloe_mock"
+        },
+        {
+          "id": "melissa",
+          "name": "Melissa",
+          "x": 20,
+          "y": 62,
+          "dialogueId": "m5_melissa_gives_up"
+        }
+      ]
+    },
+    "study_room": {
+      "id": "study_room",
+      "name": "Sala de Estudos Silenciosa",
+      "time": "13:30",
+      "description": "Mesas de carvalho individuais em um canto tranquilo e pouco movimentado da escola.",
+      "ambience": "Silêncio profundo, cortinas balançando com a brisa da tarde",
+      "objects": [
+        {
+          "id": "quiet_desk",
+          "name": "Mesa do Canto",
+          "action": "OBSERVAR",
+          "icon": "desk",
+          "x": 24,
+          "y": 78,
+          "narrative": "Onde Melissa se refugia nos momentos em que busca um pouco de paz."
+        }
+      ],
+      "characters": [
+        {
+          "id": "melissa",
+          "name": "Melissa",
+          "x": 35,
+          "y": 62,
+          "dialogueId": "m6_study_melissa"
+        }
+      ]
+    },
+    "staircase": {
+      "id": "staircase",
+      "name": "Escadaria Central & Mezanino",
+      "time": "14:15",
+      "description": "Ampla escadaria de mármore e madeira escura que conecta as alas da escola.",
+      "ambience": "Eco de passos e conversas ao fundo",
+      "objects": [
+        {
+          "id": "stairs_window",
+          "name": "Vitral do Mezanino",
+          "action": "OBSERVAR",
+          "icon": "window",
+          "x": 75,
+          "y": 35,
+          "narrative": "Luz filtrada em tons de roxo e rosa iluminando os degraus de pedra."
+        }
+      ],
+      "characters": [
+        {
+          "id": "clara",
+          "name": "Clara",
+          "x": 60,
+          "y": 60,
+          "dialogueId": "m7_confrontation_trigger"
+        },
+        {
+          "id": "sophia",
+          "name": "Sophia",
+          "x": 75,
+          "y": 60,
+          "dialogueId": "m7_chloe_laugh"
+        },
+        {
+          "id": "melissa",
+          "name": "Melissa",
+          "x": 32,
+          "y": 64,
+          "dialogueId": "m7_melissa_relief"
+        }
+      ]
+    },
+    "hallway_extended": {
+      "id": "hallway_extended",
+      "name": "Ala Norte — Corredor",
+      "time": "09:00",
+      "description": "Extensão do corredor principal com armários de madeira escura e acesso ao ateliê e salas práticas.",
+      "ambience": "Silêncio quebrado pelo tique-taque ritmado do relógio de parede",
+      "objects": [
+        {
+          "id": "wall_clock_north",
+          "name": "Relógio de Parede",
+          "action": "OBSERVAR",
+          "icon": "clock",
+          "x": 92,
+          "y": 16,
+          "narrative": "O relógio antigo marca o avanço sereno do dia na Saint Claire."
+        }
+      ],
+      "characters": [
+        {
+          "id": "sophia",
+          "name": "Sophia",
+          "x": 30,
+          "y": 60,
+          "dialogueId": "m2_valery_library"
+        }
+      ]
+    },
+    "music_room": {
+      "id": "music_room",
+      "name": "Sala de Música",
+      "time": "10:00",
+      "description": "Piano de cauda negro e instrumentos musicais guardados para o festival de primavera.",
+      "ambience": "Eco suave de notas e silêncio aconchegante",
+      "objects": [
+        {
+          "id": "piano_stand_main",
+          "name": "Piano de Cauda",
+          "action": "EXAMINAR",
+          "icon": "music",
+          "x": 62,
+          "y": 60,
+          "narrative": "O piano de cauda da Saint Claire, polido e bem cuidado."
+        }
+      ],
+      "characters": []
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfglassrain01"]
+
+[resource]
+resource_name = "glass_rain"
+transparency = 1
+albedo_color = Color(0.953, 0.914, 0.925, 0.25)
+roughness = 0.15
+refraction_enabled = true
+refraction_scale = 0.02

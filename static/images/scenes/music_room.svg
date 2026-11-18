@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E1A"/>
+      <stop offset="70%" stop-color="#2C1B2F"/>
+      <stop offset="100%" stop-color="#00030E"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B47A9A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00030E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#00030E"/>
+
+  <!-- Velvet Curtains -->
+  <path d="M0,0 Q240,400 120,1080 L0,1080 Z" fill="#2C1B2F" stroke="#5E3A5C" stroke-width="6"/>
+  <path d="M1920,0 Q1680,400 1800,1080 L1920,1080 Z" fill="#2C1B2F" stroke="#5E3A5C" stroke-width="6"/>
+
+  <!-- Wooden Stage Floor -->
+  <polygon points="200,640 1720,640 1920,1080 0,1080" fill="url(#stageGrad)"/>
+
+  <!-- Spotlight on the Grand Piano -->
+  <ellipse cx="960" cy="760" rx="420" ry="240" fill="url(#spotlight)"/>
+
+  <!-- Grand Piano Silhouette -->
+  <!-- Body -->
+  <path d="M800,680 Q760,540 980,540 Q1180,540 1140,680 Z" fill="#060812" stroke="#5E3A5C" stroke-width="4"/>
+  <!-- Open Lid -->
+  <polygon points="820,540 1060,400 1140,540" fill="#0B0E1A" stroke="#B47A9A" stroke-width="2"/>
+  <!-- Prop Stick -->
+  <line x1="980" y1="540" x2="1040" y2="420" stroke="#F3E9EC" stroke-width="3"/>
+  <!-- Keyboard area -->
+  <rect x="830" y="670" width="280" height="24" fill="#F3E9EC" stroke="#00030E" stroke-width="2"/>
+  <rect x="850" y="670" width="12" height="14" fill="#00030E"/>
+  <rect x="870" y="670" width="12" height="14" fill="#00030E"/>
+  <rect x="910" y="670" width="12" height="14" fill="#00030E"/>
+  <rect x="930" y="670" width="12" height="14" fill="#00030E"/>
+  <rect x="950" y="670" width="12" height="14" fill="#00030E"/>
+  <!-- Piano Bench -->
+  <rect x="910" y="730" width="120" height="40" rx="4" fill="#2C1B2F" stroke="#5E3A5C" stroke-width="2"/>
+  <!-- Legs -->
+  <line x1="840" y1="694" x2="840" y2="780" stroke="#060812" stroke-width="8"/>
+  <line x1="1100" y1="694" x2="1100" y2="780" stroke="#060812" stroke-width="8"/>
+
+  <!-- Music Sheet Stand -->
+  <rect x="930" y="600" width="80" height="60" fill="#F3E9EC" opacity="0.9"/>
+  <line x1="940" y1="615" x2="1000" y2="615" stroke="#2C1B2F" stroke-width="2"/>
+  <line x1="940" y1="630" x2="990" y2="630" stroke="#2C1B2F" stroke-width="2"/>
+</svg>

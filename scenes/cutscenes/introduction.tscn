@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://introscene01"]
+
+[ext_resource type="Script" path="res://scripts/ui/introduction.gd" id="1_intro"]
+
+[node name="IntroductionScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_intro")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.012, 0.055, 1)
+
+[node name="DecorativeTop" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.369, 0.227, 0.361, 0.8)
+theme_override_font_sizes/font_size = 13
+text = "ACADEMIA SAINT CLAIRE — ARQUIVO NARRATIVO"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -180.0
+offset_right = 460.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ChapterLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.706, 0.478, 0.604, 1)
+theme_override_font_sizes/font_size = 14
+text = "PROLÓGULO"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NarrativeLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 180)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.953, 0.914, 0.925, 1)
+theme_override_font_sizes/font_size = 18
+text = "Texto narrativo..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AdvanceHint" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.369, 0.227, 0.361, 1)
+theme_override_font_sizes/font_size = 13
+text = "Clique ou pressione [Espaço / E] para avançar  •  [ESC] para pular"
+horizontal_alignment = 1
+
+[node name="FadeRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.012, 0.055, 1)

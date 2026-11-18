@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://othertemplate01"]
+
+[ext_resource type="Material" path="res://assets/materials/wood_floor.tres" id="1_floor"]
+[ext_resource type="Material" path="res://assets/materials/wall_dark.tres" id="2_wall"]
+[ext_resource type="Material" path="res://assets/materials/wall_plum.tres" id="3_trim"]
+[ext_resource type="PackedScene" path="res://scenes/characters/rabecca.tscn" id="4_player"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/door.tscn" id="5_door"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6_hud"]
+
+[sub_resource type="Environment" id="Environment_tpl"]
+background_mode = 1
+background_color = Color(0, 0.012, 0.055, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.172, 0.106, 0.184, 1)
+ambient_light_energy = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wall"]
+size = Vector3(10, 4, 0.3)
+
+[node name="OtherAreasTemplate" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tpl")
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/Floor"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="CSGFloor" type="CSGBox3D" parent="Architecture/Floor"]
+size = Vector3(10, 0.2, 10)
+material = ExtResource("1_floor")
+
+[node name="Ceiling" type="CSGBox3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8, 0)
+size = Vector3(10, 0.2, 10)
+material = ExtResource("2_wall")
+
+[node name="Wall1" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/Wall1"]
+shape = SubResource("BoxShape3D_wall")
+
+[node name="CSGWall" type="CSGBox3D" parent="Architecture/Wall1"]
+size = Vector3(10, 3.8, 0.3)
+material = ExtResource("2_wall")
+
+[node name="AreaSign" type="Label3D" parent="Architecture/Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0.2)
+text = "ÁREA MODULAR — TEMPLATE DE EXPANSÃO\n(Biblioteca, Pátio, Diretoria, Dormitórios)"
+font_size = 20
+modulate = Color(0.706, 0.478, 0.604, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+light_color = Color(0.95, 0.88, 0.8, 1)
+light_energy = 0.8
+omni_range = 8.0
+
+[node name="DoorToCorridor" parent="." instance=ExtResource("5_door")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.8)
+door_name = "Corredor Principal"
+target_scene_path = "res://scenes/levels/main_corridor.tscn"
+target_spawn_id = "spawn_start"
+
+[node name="Rabecca" parent="." instance=ExtResource("4_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 2)
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]

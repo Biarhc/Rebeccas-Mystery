@@ -1,0 +1,52 @@
+{
+  "clue_torn_note": {
+    "id": "clue_torn_note",
+    "title": "Bilhete Rasgado",
+    "quote": "“Você prometeu que não contaria.”",
+    "description": "Um pedaço de papel pautado rasgado às pressas. A caligrafia trêmula pertence a Clara. A frase revela uma quebra de confiança que Clara tentava esconder.",
+    "location": "Atrás da mesa de Clara — Sala de Aula 2-B",
+    "discovery_date": "14 de Outubro, 14:38",
+    "characters_related": ["clara", "beatriz", "sophia"],
+    "unlocked_dialogues": ["sophia_confront_note", "beatriz_interrogate_note"]
+  },
+  "clue_old_photo": {
+    "id": "clue_old_photo",
+    "title": "Fotografia Antiga",
+    "quote": "“Sempre nós duas, venha o que vier.” — 1º ano",
+    "description": "Uma fotografia Polaroid com bordas desgastadas. Mostra Clara e Valentina rindo juntas no pátio da escola. Hoje as duas mal se olham e Valentina expressa ódio aberto por Clara.",
+    "location": "Mural de Recados — Corredor Principal",
+    "discovery_date": "14 de Outubro, 14:42",
+    "characters_related": ["clara", "valentina"],
+    "unlocked_dialogues": ["valentina_confront_photo"]
+  },
+  "clue_deleted_message": {
+    "id": "clue_deleted_message",
+    "title": "Mensagem Apagada",
+    "quote": "“Não vem para a escola amanhã.”",
+    "description": "Uma notificação arquivada na lixeira de mensagens de um celular esquecido sobre o banco. O remetente era desconhecido, mas o tom era um aviso urgente.",
+    "location": "Banco do Corredor — Próximo aos Armários",
+    "discovery_date": "14 de Outubro, 14:45",
+    "characters_related": ["clara", "helena"],
+    "unlocked_dialogues": ["helena_ask_message"]
+  },
+  "clue_school_motto": {
+    "id": "clue_school_motto",
+    "title": "Cartaz: 'Meninas apoiam meninas'",
+    "quote": "“O lema que todos repetem, mas ninguém pratica.”",
+    "description": "O cartaz oficial da Academia Saint Claire pregado com alfinetes dourados. No canto inferior, alguém riscou com grafite fino uma interrogação: 'Apoiam quem?'.",
+    "location": "Mural Central — Corredor Principal",
+    "discovery_date": "14 de Outubro, 14:35",
+    "characters_related": ["rabecca", "professora_elizabeth"],
+    "unlocked_dialogues": ["elizabeth_school_climate"]
+  },
+  "clue_clara_sketchbook": {
+    "id": "clue_clara_sketchbook",
+    "title": "Caderno de Aquarelas de Clara",
+    "quote": "“As cores estão sumindo dos corredores.”",
+    "description": "Páginas com aquarelas melancólicas em tons de ameixa e rosa envelhecido. Uma figura feminina caminha por um corredor infinito enquanto silhuetas sem rosto cochicham nas portas.",
+    "location": "Mesa de Clara — Sala de Aula 2-B",
+    "discovery_date": "14 de Outubro, 14:50",
+    "characters_related": ["clara", "rabecca"],
+    "unlocked_dialogues": ["sophia_ask_art"]
+  }
+}

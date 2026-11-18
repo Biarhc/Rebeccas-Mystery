@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Missão 1 — Um novo dia na Saint Claire",
+    "shortTitle": "1. Um novo dia",
+    "objective": "Entregar a pasta de relatórios na mesa da Professora Paola na Sala de Literatura.",
+    "startScene": "classroom",
+    "targetScene": "literature_room",
+    "clueReward": "student_guide",
+    "diaryEntry": "Primeiro período na Academia Saint Claire. O lema 'Meninas apoiam meninas' decora todas as portas. Cruzei com Melissa no corredor organizando o armário; ela pareceu desconfortável ao ouvir risadinhas por perto, mas seguiu em silêncio.",
+    "summary": "Rebecca chega à escola e aprende a se orientar pela Saint Claire, entregando os materiais para a professora."
+  },
+  {
+    "id": 2,
+    "title": "Missão 2 — O material perdido",
+    "shortTitle": "2. O material perdido",
+    "objective": "Encontrar o caderno de anotações esquecido na Biblioteca e falar com Valery.",
+    "startScene": "literature_room",
+    "targetScene": "literature_room",
+    "clueReward": "scattered_supplies",
+    "diaryEntry": "Na biblioteca, encontrei Melissa recolhendo com pressa seus materiais do chão. Madison passou e soltou um comentário desdenhoso. Perguntei se Melissa precisava de ajuda, mas ela me garantiu: 'Está tudo bem, sério. Só estou meio distraída hoje.'",
+    "summary": "Rebecca procura um caderno esquecido e encontra Melissa tentando disfarçar mais um momento desconfortável."
+  },
+  {
+    "id": 3,
+    "title": "Missão 3 — Preparativos para o evento escolar",
+    "shortTitle": "3. Preparativos do evento",
+    "objective": "Recolher as tintas especiais no Ateliê de Artes com Chloe e levar para o Conselho Estudantil.",
+    "startScene": "art_room",
+    "targetScene": "student_council",
+    "clueReward": "whispered_silence",
+    "diaryEntry": "Fui buscar as tintas para o festival. Ao me aproximar de Madison e Chloe, elas subitamente pararam de cochichar e rir. Notei que Melissa foi excluída de todas as comissões organizadoras. O clima ficou tenso sem motivo aparente.",
+    "summary": "Rebecca ajuda nas tarefas da escola e repara que certas alunas mudam de assunto e excluem Melissa sistematicamente."
+  },
+  {
+    "id": 4,
+    "title": "Missão 4 — Um recado inesperado",
+    "shortTitle": "4. Um recado inesperado",
+    "objective": "Entregar o comunicado do conselho para a delegada de turma Sam Castellano no Corredor Principal.",
+    "startScene": "student_council",
+    "targetScene": "hallway",
+    "clueReward": "torn_note",
+    "diaryEntry": "No caminho dos armários, encontrei um papel amassado com frases humilhantes sem assinatura: 'Ninguém quer você no grupo'. Melissa passou por perto, viu o papel nas minhas mãos e ficou visivelmente ansiosa, pedindo para eu não me preocupar e mudando de assunto.",
+    "summary": "Rebecca encontra um bilhete anônimo de perseguição e nota a reação nervosa e esquiva de Melissa."
+  },
+  {
+    "id": 5,
+    "title": "Missão 5 — Trabalhos em grupo",
+    "shortTitle": "5. Trabalhos em grupo",
+    "objective": "Ir ao Laboratório de Ciências e verificar a divisão de duplas para a atividade prática.",
+    "startScene": "hallway",
+    "targetScene": "science_lab",
+    "clueReward": "group_sheet",
+    "diaryEntry": "No laboratório, Melissa sugeriu uma ideia para o experimento, mas Madison e Chloe imediatamente desdenharam com deboche. Melissa sorriu sem graça e disse que preferia fazer a atividade sozinha. As outras alunas ficaram em silêncio constrangido.",
+    "summary": "Melissa tenta colaborar em aula, mas é diminuída e empurrada para o isolamento por comentários das mesmas garotas."
+  },
+  {
+    "id": 6,
+    "title": "Missão 6 — Pequenos sinais",
+    "shortTitle": "6. Pequenos sinais",
+    "objective": "Pegar o livro de partituras e estudos na Sala de Estudos e falar com Melissa.",
+    "startScene": "science_lab",
+    "targetScene": "study_room",
+    "clueReward": "evasive_answers",
+    "diaryEntry": "Tem alguma coisa acontecendo com a Melissa. Encontrei ela sentada sozinha em um canto da sala de estudos, com os olhos marejados. Tentei conversar com calma, mas ela se fechou por medo de piorar tudo. Não posso ignorar esses sinais.",
+    "summary": "Rebecca encontra Melissa fragilizada em um canto quieto e anota em seu diário o padrão de sofrimento que vem observando."
+  },
+  {
+    "id": 7,
+    "title": "Missão 7 — O que Rebecca finalmente vê",
+    "shortTitle": "7. O que Rebecca vê",
+    "objective": "Levar a pasta de atividades para Melissa perto da Escadaria Central.",
+    "startScene": "study_room",
+    "targetScene": "staircase",
+    "clueReward": "direct_witness",
+    "diaryEntry": "Eu finalmente vi tudo com meus próprios olhos. Madison e Chloe estavam encurralando Melissa no patamar da escadaria, zombando da falta de reação dela. Fiquei entre elas e deixei bem claro que humilhar e continuar não é brincadeira. Depois que saíram, Melissa pôde desabafar pela primeira vez.",
+    "summary": "Ponto de virada decisivo: Rebecca presencia diretamente o bullying verbal e intimidador, intervém com firmeza e acolhe Melissa."
+  },
+  {
+    "id": 8,
+    "title": "Missão 8 — Você não precisa enfrentar isso sozinha",
+    "shortTitle": "8. Não enfrente sozinha",
+    "objective": "Acompanhar Melissa até a sala da professora e orientadora Paola para relatar a situação.",
+    "startScene": "staircase",
+    "targetScene": "student_council",
+    "clueReward": "support_resolution",
+    "diaryEntry": "Acompanhei a Melissa até a sala de orientação. Sentamos com a Sra. Paola e contamos tudo o que estava acontecendo, passo a passo. Apoiar alguém não é resolver tudo por mágica, mas sim estar junto para que ninguém enfrente o silêncio e o medo sozinha.",
+    "summary": "Rebecca apoia Melissa até o gabinete da orientação, concretizando o verdadeiro sentido de sororidade e respeito."
+  }
+]

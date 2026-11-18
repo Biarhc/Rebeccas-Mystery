@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebecca's Mystery — Academia Saint Claire</title>
+  <meta name="description" content="Um jogo narrativo indie de mistério psicológico, viagem no tempo e investigação escolar na Academia Saint Claire.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=VT323&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+</head>
+<body>
+  <!-- Atmospheric CRT scanlines & Particle Dust Canvas -->
+  <div class="crt-overlay"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <div id="game-container">
+    
+    <!-- 1. TITLE SCREEN (Cinematográfica & Parallax) -->
+    <section id="title-screen" class="screen title-screen active cinematic-intro-state">
+      <!-- Camadas de Fundo em Parallax e Profundidade -->
+      <div class="parallax-stage" id="title-parallax-stage">
+        <div class="parallax-layer layer-dark-depth"></div>
+        <div class="parallax-layer layer-corridor-hall"></div>
+        <div class="parallax-layer layer-windows-light"></div>
+        <div class="parallax-layer layer-curtains">
+          <div class="swaying-curtain left"></div>
+          <div class="swaying-curtain right"></div>
+        </div>
+        <div class="parallax-layer layer-shadows"></div>
+        <canvas id="intro-particles-canvas" class="intro-particles-canvas"></canvas>
+      </div>
+
+      <!-- Sombras vinheta e névoa atmosférica -->
+      <div class="cinematic-fog"></div>
+      <div class="cinematic-vignette"></div>
+
+      <!-- Controle discreto de áudio na tela de título -->
+      <button id="btn-toggle-sound" class="title-audio-toggle" aria-label="Ligar/Desligar som ambiente" title="Silenciar / Ativar som">
+        <svg class="audio-on-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span class="audio-label">SOM</span>
+      </button>
+
+      <!-- Conteúdo Central Cinematográfico -->
+      <div class="title-content" id="title-main-content">
+        
+        <!-- Brasão Elegante da Academia Saint Claire com Relógio Antigo -->
+        <div class="crest-container" id="title-crest">
+          <div class="crest-glow-halo"></div>
+          <svg class="school-crest-svg" viewBox="0 0 120 140" width="80" height="92">
+            <defs>
+              <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F3E9EC"/>
+                <stop offset="50%" stop-color="#B47A9A"/>
+                <stop offset="100%" stop-color="#5E3A5C"/>
+              </linearGradient>
+            </defs>
+            <!-- Escudo gótico -->
+            <path d="M60 6 L108 24 C108 76 88 116 60 134 C32 116 12 76 12 24 Z" fill="rgba(11, 14, 26, 0.85)" stroke="url(#crestGold)" stroke-width="2.5" filter="drop-shadow(0 0 8px rgba(180, 122, 154, 0.5))"/>
+            <!-- Detalhe interno relógio antigo com ponteiros em movimento lento -->
+            <circle cx="60" cy="62" r="28" fill="rgba(44, 27, 47, 0.5)" stroke="#B47A9A" stroke-width="1.5" stroke-dasharray="2 3"/>
+            <!-- Marcações horárias -->
+            <line x1="60" y1="36" x2="60" y2="40" stroke="#F3E9EC" stroke-width="1.8"/>
+            <line x1="60" y1="84" x2="60" y2="88" stroke="#F3E9EC" stroke-width="1.8"/>
+            <line x1="34" y1="62" x2="38" y2="62" stroke="#F3E9EC" stroke-width="1.8"/>
+            <line x1="82" y1="62" x2="86" y2="62" stroke="#F3E9EC" stroke-width="1.8"/>
+            <!-- Ponteiros do tempo animando -->
+            <line id="crest-clock-hour" x1="60" y1="62" x2="60" y2="48" stroke="#F3E9EC" stroke-width="2" stroke-linecap="round"/>
+            <line id="crest-clock-minute" x1="60" y1="62" x2="72" y2="62" stroke="#B47A9A" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="60" cy="62" r="2.5" fill="#F3E9EC"/>
+            <!-- Lema da escola em arco e flor de lis -->
+            <path d="M60 98 L64 106 L60 114 L56 106 Z" fill="#B47A9A"/>
+          </svg>
+          <div class="title-ornament">◆ ACADEMIA SAINT CLAIRE ◆</div>
+        </div>
+
+        <!-- Título com efeito de luz cinematográfico inspirado em Hollow Knight -->
+        <div class="logo-wrapper" id="title-logo-wrapper">
+          <div class="logo-sweep-light"></div>
+          <h1 class="game-logo" id="main-game-title">
+            <span class="logo-text">REBECCA'S MYSTERY</span>
+          </h1>
+          <div class="logo-flourish">
+            <span class="flourish-line"></span>
+            <span class="flourish-diamond">✧</span>
+            <span class="flourish-line"></span>
+          </div>
+        </div>
+
+        <!-- Subtítulo oficial -->
+        <p class="game-subtitle" id="title-subtitle">"Por trás de cada sorriso, existe um segredo."</p>
+
+        <!-- Botões de Ação Principais -->
+        <div class="intro-actions" id="title-actions">
+          <button id="btn-iniciar-jogo" class="btn-start-primary" tabindex="1">
+            <span class="btn-glow-border"></span>
+            <span class="btn-text">INICIAR JOGO</span>
+            <span class="btn-sparkle">✦</span>
+          </button>
+
+          <div class="intro-secondary-links">
+            <button id="btn-continue-intro" class="secondary-btn" tabindex="2">Continuar</button>
+            <span class="sep">•</span>
+            <button id="btn-settings-title" class="secondary-btn" tabindex="3">Configurações</button>
+            <span class="sep">•</span>
+            <button id="btn-credits" class="secondary-btn" tabindex="4">Créditos</button>
+          </div>
+        </div>
+
+        <!-- Dica discreta de pular intro inicial -->
+        <div id="intro-fastforward-hint" class="intro-fastforward-hint">
+          [ Pressione ENTER ou clique para pular a abertura ]
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. CINEMATIC INTRO SCREEN -->
+    <section id="intro-screen" class="screen intro-screen">
+      <div class="intro-container">
+        <div id="intro-text" class="intro-text-block"></div>
+        <div id="intro-skip" class="intro-skip-prompt">[ Clique ou aperte ESPAÇO para avançar ]</div>
+      </div>
+    </section>
+
+    <!-- 3. MAIN GAMEPLAY / EXPLORATION SCREEN -->
+    <section id="gameplay-screen" class="screen gameplay-screen">
+      
+      <!-- Top HUD Header -->
+      <header class="hud-header">
+        <div class="hud-location">
+          <div id="hud-location-name" class="hud-loc-name">Sala de Aula 2-B</div>
+          <div id="hud-location-ambience" class="hud-loc-sub">Chuva suave batendo nas janelas</div>
+        </div>
+
+        <div class="hud-time-container">
+          <span class="hud-date" id="hud-date-text">SEGUNDA-FEIRA — SAINT CLAIRE</span>
+          <span class="hud-clock" id="hud-clock-text">08:15</span>
+          <span class="hud-mission-badge" id="hud-mission-badge">Missão 1/8</span>
+        </div>
+      </header>
+
+      <!-- Active Mission Banner -->
+      <div id="active-mission-banner" class="active-mission-banner">
+        <span class="mission-tag">OBJETIVO:</span>
+        <span id="active-mission-text" class="mission-text">Entregar a pasta de relatórios na mesa da Professora Paola na Sala de Literatura.</span>
+      </div>
+
+
+      <!-- Viewport / Canvas Layer for Interactive Objects -->
+      <main class="scene-viewport" id="scene-viewport">
+        <div class="scene-artwork" id="scene-artwork"></div>
+        <div class="scene-environment-layer"></div>
+        
+        <!-- Hotspots and Sprites will be dynamically injected here -->
+        <div id="hotspots-container"></div>
+      </main>
+
+      <!-- Bottom HUD & Keybindings -->
+      <footer class="hud-footer">
+        <div class="hud-quick-hints">
+          <span class="hud-hint-badge"><span class="key-cap">TAB</span> Diário</span>
+          <span class="hud-hint-badge"><span class="key-cap">ESC</span> Menu</span>
+        </div>
+
+        <!-- Dynamic Mission Action Dock -->
+        <div id="mission-action-dock" class="mission-action-dock" aria-label="Comandos Dinâmicos da Missão"></div>
+
+        <div class="hud-actions">
+          <button id="btn-open-notebook" class="hud-action-btn">
+            <svg class="hud-btn-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <line x1="9" y1="7" x2="15" y2="7"></line>
+              <line x1="9" y1="11" x2="13" y2="11"></line>
+            </svg>
+            Diário & Pistas
+          </button>
+          <button id="btn-open-menu" class="hud-action-btn">
+            <svg class="hud-btn-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            Menu
+          </button>
+        </div>
+      </footer>
+
+      <!-- OMORI-STYLE DIALOGUE BOX LAYER -->
+      <div id="dialogue-layer" class="dialogue-modal-layer">
+        <div class="omori-dialogue-window">
+          <div class="dialogue-portrait-wrapper">
+            <div class="speaker-avatar-frame">
+              <img id="dialogue-avatar" src="{{ url_for('static', filename='images/avatars/melissa.png') }}" alt="Retrato do Personagem">
+            </div>
+            <div id="dialogue-speaker" class="dialogue-speaker-name">Rebecca</div>
+          </div>
+          <div class="dialogue-body">
+            <div id="dialogue-content" class="dialogue-text"></div>
+            <div id="dialogue-arrow" class="dialogue-continue-arrow">▼</div>
+          </div>
+        </div>
+
+        <!-- Choices Container -->
+        <div id="dialogue-choices" class="dialogue-choices-container"></div>
+      </div>
+
+    </section>
+
+    <!-- 4. NOTEBOOK & CLUES MODAL -->
+    <div id="notebook-modal" class="modal-overlay">
+      <div class="notebook-modal-window">
+        <div class="notebook-header">
+          <div class="notebook-tabs">
+            <button class="tab-btn active" data-tab="tab-missions">Missões Escolares</button>
+            <button class="tab-btn" data-tab="tab-clues">Pistas & Sinais</button>
+            <button class="tab-btn" data-tab="tab-diary">Diário de Rebecca</button>
+            <button class="tab-btn" data-tab="tab-relationships">Alunas & Orientação</button>
+          </div>
+          <button id="btn-close-notebook" class="close-modal-btn">✕</button>
+        </div>
+
+        <div class="notebook-content-body">
+          <!-- Missions Panel -->
+          <div id="tab-missions" class="tab-panel active">
+            <div class="missions-container" id="missions-list-container"></div>
+          </div>
+
+          <!-- Clues Panel -->
+          <div id="tab-clues" class="tab-panel">
+            <div class="clues-grid" id="clues-list-grid"></div>
+          </div>
+
+          <!-- Diary Panel -->
+          <div id="tab-diary" class="tab-panel">
+            <div class="diary-container" id="diary-entries-list"></div>
+          </div>
+
+          <!-- Relationships Panel -->
+          <div id="tab-relationships" class="tab-panel">
+            <div class="character-status-grid" id="characters-list-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. PAUSE / SETTINGS MODAL -->
+    <div id="pause-modal" class="modal-overlay">
+      <div class="notebook-modal-window" style="max-width: 500px; height: auto;">
+        <div class="notebook-header">
+          <h3 style="font-family: var(--font-pixel); font-size: 1.4rem;">MENU DO JOGO</h3>
+          <button id="btn-close-pause" class="close-modal-btn">✕</button>
+        </div>
+        <div class="notebook-content-body">
+          <div class="settings-menu-list">
+            <button id="btn-save-progress" class="settings-btn">Salvar Jogo</button>
+            <button id="btn-restart-timeline" class="settings-btn">Reiniciar Linha do Tempo</button>
+            <button id="btn-return-title" class="settings-btn">Voltar à Tela Inicial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. CREDITS MODAL -->
+    <div id="credits-modal" class="modal-overlay">
+      <div class="notebook-modal-window" style="max-width: 600px; height: auto;">
+        <div class="notebook-header">
+          <h3 style="font-family: var(--font-pixel); font-size: 1.4rem;">CRÉDITOS</h3>
+          <button id="btn-close-credits" class="close-modal-btn">✕</button>
+        </div>
+        <div class="notebook-content-body" style="line-height: 1.8; text-align: center;">
+          <h2 style="font-family: var(--font-serif); color: var(--color-dusty-pink); margin-bottom: 8px;">Rebecca's Mystery</h2>
+          <p style="font-size: 1rem; color: var(--color-cream); margin-bottom: 14px;">Uma experiência narrativa de mistério escolar e escolhas.</p>
+
+          <div style="margin: 16px 0; padding: 12px 16px; background: rgba(44, 27, 47, 0.4); border: 1px solid rgba(180, 122, 154, 0.3); border-radius: 6px;">
+            <div style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--color-dusty-pink); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px;">Desenvolvido por</div>
+            <div style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; letter-spacing: 1px; font-weight: 500;">
+              Bianca Amorim &bull; Beatriz Rocha &bull; Mariana Rocha
+            </div>
+          </div>
+
+          <p style="font-size: 0.88rem; color: #c9bfcb; margin-top: 10px;">
+            Inspirado na atmosfera de Life is Strange e estética emocional de Omori.<br>
+            Desenvolvido para Academia Saint Claire.
+          </p>
+          <div style="margin-top: 18px; font-family: var(--font-pixel); color: var(--color-dusty-pink); font-size: 1.05rem;">
+            "Meninas apoiam meninas." — Mas quem apoiava quem?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIME REWIND SUPER EFFECT OVERLAY -->
+    <div id="time-rewind-overlay">
+      <div class="rewind-clock"></div>
+      <div class="rewind-text">VOLTANDO NO TEMPO...</div>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="consequence-toast" class="consequence-toast"></div>
+
+    <!-- MISSION COMPLETE CELEBRATION MODAL -->
+    <div id="mission-complete-modal" class="mission-complete-modal"></div>
+
+  </div>
+
+  <!-- Audio Manager Mock (Web Audio API Synthesizer included in main.js) -->
+  <audio id="bgm-player" loop></audio>
+
+  <!-- Game Scripts (Modularized architecture) -->
+  <script src="{{ url_for('static', filename='js/save.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/investigation.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dialogue.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/missions.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

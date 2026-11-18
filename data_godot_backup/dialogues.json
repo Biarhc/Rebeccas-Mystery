@@ -1,0 +1,170 @@
+{
+  "sophia_intro": {
+    "speaker": "Sophia Leal",
+    "avatar": "sophia",
+    "text": "Rabecca?... Você parece que viu um fantasma. Está tudo bem com você?",
+    "options": [
+      {
+        "id": "sophia_ask_concerned",
+        "text": "“Estou perguntando porque estou preocupada... com você e com a Clara.”",
+        "next_dialogue": "sophia_concerned_reply",
+        "relationship_effects": { "sophia": { "trust": 15, "friendship": 10 } },
+        "feedback_message": "Sophia sentiu sinceridade em suas palavras."
+      },
+      {
+        "id": "sophia_ask_accusing",
+        "text": "“Eu sei que você estava com ela ontem. Não precisa disfarçar.”",
+        "next_dialogue": "sophia_defensive_reply",
+        "relationship_effects": { "sophia": { "trust": -15, "suspicion": 20 } },
+        "feedback_message": "Sophia recuou. Ela vai se lembrar disso."
+      },
+      {
+        "id": "sophia_ask_gentle",
+        "text": "“Não precisa responder nada agora. Só queria saber se você está bem.”",
+        "next_dialogue": "sophia_gentle_reply",
+        "relationship_effects": { "sophia": { "friendship": 15, "trust": 5 } },
+        "feedback_message": "Você ofereceu um espaço seguro para Sophia."
+      }
+    ]
+  },
+  "sophia_concerned_reply": {
+    "speaker": "Sophia Leal",
+    "avatar": "sophia",
+    "text": "Com a Clara?... Ela tem andado tão calada ultimamente. Toda vez que tento falar com ela, parece que tem uma parede invisível entre nós. Eu... sinto que fiz algo de errado, mas ela não me conta.",
+    "diary_entry": "Conversei com Sophia de forma sincera. Ela parece genuinamente angustiada com o distanciamento de Clara, mas ainda há algo que ela teme dizer.",
+    "advance_time_minutes": 5,
+    "options": [
+      {
+        "id": "sophia_ask_more",
+        "text": "“Você notou se alguém a estava pressionando?”",
+        "next_dialogue": "sophia_pressure_reply",
+        "conditions": { "has_clue": "clue_torn_note" }
+      },
+      {
+        "id": "sophia_end",
+        "text": "“Obrigada por me contar, Sophia. Vou tentar falar com ela também.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "sophia_defensive_reply": {
+    "speaker": "Sophia Leal",
+    "avatar": "sophia",
+    "text": "O que você está insinuando, Rabecca?! Eu sou a melhor amiga dela! Se ela não veio falar comigo, não é culpa minha! Por favor... não se meta nisso.",
+    "diary_entry": "Pressionei Sophia e ela se fechou completamente. Ela sabe de algo sobre o dia anterior, mas o medo de ser julgada a impede de falar.",
+    "advance_time_minutes": 5,
+    "options": [
+      {
+        "id": "sophia_def_end",
+        "text": "“Desculpe. Eu não queria soar agressiva.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "sophia_gentle_reply": {
+    "speaker": "Sophia Leal",
+    "avatar": "sophia",
+    "text": "Obrigada, Rabecca... É estranho. Nessa escola todo mundo sorri e diz 'meninas apoiam meninas', mas quando você realmente precisa desabafar, parece que tudo vira fofoca de corredor.",
+    "diary_entry": "Sophia admitiu sentir a falsidade do lema da escola. Ela está mais disposta a ouvir agora.",
+    "advance_time_minutes": 5,
+    "options": [
+      {
+        "id": "sophia_gentle_end",
+        "text": "“Você não está sozinha nisso. Prometo.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "sophia_confront_note": {
+    "speaker": "Sophia Leal",
+    "avatar": "sophia",
+    "text": "Onde... onde você achou esse papel?! Esse bilhete era da Clara! Ela me entregou antes da última aula... me pediu para guardar um segredo sobre a Beatriz e a Valentina. Eu tive tanto medo que deixei cair!",
+    "diary_entry": "Mostrei o bilhete rasgado para Sophia. Ela confessou que Clara havia pedido sua ajuda contra um segredo que envolvia Beatriz e Valentina.",
+    "advance_time_minutes": 8,
+    "relationship_effects": { "sophia": { "trust": 20 } },
+    "feedback_message": "Uma peça fundamental do mistério se encaixou.",
+    "options": [
+      {
+        "id": "sophia_note_thanks",
+        "text": "“Você teve coragem de falar. Agora podemos impedir que o pior aconteça.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "valentina_intro": {
+    "speaker": "Valentina Rocha",
+    "avatar": "valentina",
+    "text": "O que você quer, Rabecca? Se veio me dar lição de moral sobre o comitê estudantil, guarde suas palavras. Não tenho paciência hoje.",
+    "options": [
+      {
+        "id": "valentina_ask_scholarship",
+        "text": "“Eu sei que a disputa pela bolsa de artes está sufocando todo mundo.”",
+        "next_dialogue": "valentina_scholarship_reply",
+        "relationship_effects": { "valentina": { "trust": 10 } },
+        "feedback_message": "Valentina pareceu surpresa por você não a acusar."
+      },
+      {
+        "id": "valentina_ask_confront",
+        "text": "“Você acusou a Clara injustamente na frente de todos. Você não sente remorso?”",
+        "next_dialogue": "valentina_hostile_reply",
+        "relationship_effects": { "valentina": { "trust": -20, "suspicion": 25 } },
+        "feedback_message": "Valentina cruzou os braços. A tensão aumentou."
+      },
+      {
+        "id": "valentina_leave",
+        "text": "“Só estava de passagem. Não precisa ser tão hostil.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "valentina_scholarship_reply": {
+    "speaker": "Valentina Rocha",
+    "avatar": "valentina",
+    "text": "Sufocando? Você não tem ideia. Minha família só fala nisso. Se eu não passar, eles me transferem de cidade. A Clara... ela tem talento de verdade. Eu só tenho a obrigação de vencer. É diferente.",
+    "diary_entry": "Valentina confessou a pressão absurda de sua família e admitiu o talento de Clara. Por baixo da frieza, existe um profundo desespero de insuficiência.",
+    "advance_time_minutes": 6,
+    "options": [
+      {
+        "id": "valentina_photo_option",
+        "text": "“Eu encontrei isto no mural... Você ainda se lembra?”",
+        "conditions": { "has_clue": "clue_old_photo" },
+        "next_dialogue": "valentina_confront_photo"
+      },
+      {
+        "id": "valentina_end_scholarship",
+        "text": "“Competição nenhuma deveria destruir quem vocês eram.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "valentina_hostile_reply": {
+    "speaker": "Valentina Rocha",
+    "avatar": "valentina",
+    "text": "Injustamente?! Ela copiou a paleta e a composição do meu projeto! Ninguém aqui é santa, Rabecca. Especialmente a garota de ouro que todo mundo adora proteger.",
+    "diary_entry": "Valentina ainda insiste na acusação de plágio, mas seu tom soa mais como autojustificação do que certeza.",
+    "advance_time_minutes": 5,
+    "options": [
+      {
+        "id": "valentina_hostile_end",
+        "text": "“As coisas nem sempre são o que parecem nos corredores.”",
+        "next_dialogue": null
+      }
+    ]
+  },
+  "valentina_confront_photo": {
+    "speaker": "Valentina Rocha",
+    "avatar": "valentina",
+    "text": "(Ela olha para a foto... os olhos marejam por um breve instante antes de desviar o olhar.)\nOnde você achou essa foto velha?... Éramos crianças aí. Antes de todo esse peso cair sobre nós. Eu... eu não a odeio, Rabecca. Eu só queria que ela não tivesse me deixado de lado quando tudo começou.",
+    "diary_entry": "Ao ver a foto antiga, a máscara de Valentina caiu. Ela não odeia Clara: sente mágoa e saudade da amizade que perderam.",
+    "advance_time_minutes": 8,
+    "relationship_effects": { "valentina": { "trust": 25, "friendship": 20 } },
+    "feedback_message": "Isso mudou alguma coisa importante no destino de Valentina.",
+    "options": [
+      {
+        "id": "valentina_photo_end",
+        "text": "“Ainda dá tempo de consertar isso, Valentina. Ainda dá tempo.”",
+        "next_dialogue": null
+      }
+    ]
+  }
+}

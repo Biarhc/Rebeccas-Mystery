@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00030E"/>
+      <stop offset="50%" stop-color="#0B0E1A"/>
+      <stop offset="100%" stop-color="#2C1B2F"/>
+    </linearGradient>
+    <linearGradient id="gothicGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C1B2F" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00030E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)"/>
+
+  <!-- Distant Mountains / Trees -->
+  <path d="M0,800 Q300,720 600,780 T1200,750 T1920,810 L1920,1080 L0,1080 Z" fill="#060812"/>
+
+  <!-- Saint Claire Gothic School Silhouette -->
+  <!-- Main Towers & Spire -->
+  <g fill="url(#gothicGrad)">
+    <!-- Left Wing -->
+    <rect x="250" y="480" width="300" height="400" />
+    <polygon points="230,480 400,240 570,480" />
+    <polygon points="260,320 280,220 300,320" />
+    
+    <!-- Central Cathedral / Clock Spire -->
+    <rect x="700" y="360" width="520" height="520" />
+    <polygon points="680,360 960,110 1240,360" />
+    <rect x="920" y="80" width="80" height="280" />
+    <polygon points="900,80 960,0 1020,80" />
+
+    <!-- Right Wing -->
+    <rect x="1350" y="480" width="320" height="400" />
+    <polygon points="1330,480 1510,240 1690,480" />
+  </g>
+
+  <!-- Arch Windows Glowing in Dusty Rose & Plum -->
+  <g fill="#B47A9A" opacity="0.35" filter="url(#glow)">
+    <!-- Tower Windows -->
+    <path d="M940,240 A20,20 0 0,1 980,240 L980,300 L940,300 Z" />
+    <path d="M780,480 A25,25 0 0,1 830,480 L830,560 L780,560 Z" />
+    <path d="M860,480 A25,25 0 0,1 910,480 L910,560 L860,560 Z" />
+    <path d="M1010,480 A25,25 0 0,1 1060,480 L1060,560 L1010,560 Z" />
+    <path d="M1090,480 A25,25 0 0,1 1140,480 L1140,560 L1090,560 Z" />
+
+    <!-- Left & Right Wing Windows -->
+    <path d="M360,520 A20,20 0 0,1 400,520 L400,590 L360,590 Z" />
+    <path d="M430,520 A20,20 0 0,1 470,520 L470,590 L430,590 Z" />
+    <path d="M1450,520 A20,20 0 0,1 1490,520 L1490,590 L1450,590 Z" />
+    <path d="M1530,520 A20,20 0 0,1 1570,520 L1570,590 L1530,590 Z" />
+  </g>
+
+  <!-- Clock Face -->
+  <circle cx="960" cy="390" r="32" fill="#2C1B2F" stroke="#B47A9A" stroke-width="4"/>
+  <line x1="960" y1="390" x2="960" y2="370" stroke="#F3E9EC" stroke-width="3" stroke-linecap="round"/>
+  <line x1="960" y1="390" x2="976" y2="395" stroke="#F3E9EC" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Fog / Mist Layer -->
+  <rect x="0" y="820" width="1920" height="260" fill="url(#skyGrad)" opacity="0.85"/>
+  <ellipse cx="960" cy="950" rx="900" ry="120" fill="#2C1B2F" opacity="0.3" filter="url(#glow)"/>
+</svg>

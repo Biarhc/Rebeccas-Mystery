@@ -1,0 +1,720 @@
+{
+  "m1_paola_delivery": {
+    "speaker": "Professora",
+    "avatar": "static/images/avatars/professora.png",
+    "text": "Ah, Rebecca! Muito obrigada por trazer os relatórios da turma 2-B. Pontual como sempre. A disciplina e a colaboração são a base da nossa academia.",
+    "choices": [
+      {
+        "text": "De nada, Professora. Foi um prazer ajudar.",
+        "effect": {
+          "trust": 10,
+          "prompt": "A Professora acenou com aprovação."
+        },
+        "next": "m1_paola_talk"
+      },
+      {
+        "text": "A senhora viu a Melissa hoje? Ela parecia um pouco apreensiva no corredor...",
+        "effect": {
+          "trust": 5,
+          "prompt": "Rebecca registrou uma primeira observação."
+        },
+        "next": "m1_paola_melissa"
+      }
+    ]
+  },
+  "m1_paola_talk": {
+    "speaker": "Professora",
+    "avatar": "static/images/avatars/professora.png",
+    "text": "Excelente. Aproveite o restante do intervalo para revisar o material da aula na biblioteca. Sophia está por lá organizando os fichários.",
+    "missionAdvance": 1,
+    "choices": []
+  },
+  "m1_paola_melissa": {
+    "speaker": "Professora",
+    "avatar": "static/images/avatars/professora.png",
+    "text": "A Melissa? Não reparei em nada fora do habitual. É uma aluna bastante quieta. Devem ser apenas os nervos normais do início de trimestre.",
+    "missionAdvance": 1,
+    "choices": []
+  },
+  "m2_valery_library": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Rebecca! Você viu o caderno de literatura azul que deixei sobre a mesa central? Ele tem as anotações essenciais para o nosso seminário.",
+    "choices": [
+      {
+        "text": "Já estou indo verificar a mesa central para você, Sophia.",
+        "effect": {
+          "friendship": 5
+        },
+        "next": null
+      }
+    ]
+  },
+  "m2_valery_search": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Obrigada! Ah... e tome cuidado ali perto dos armários do fundo. Ouvi um barulho de coisas caindo há pouco.",
+    "choices": []
+  },
+  "m2_melissa_scattered": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Ai... que desajeitada eu sou. Não vi onde estava pisando e tudo escorregou da minha mochila...",
+    "choices": [
+      {
+        "text": "Deixa que eu te ajudo a juntar as folhas. Está tudo bem, Melissa?",
+        "effect": {
+          "trust": 15,
+          "friendship": 15,
+          "prompt": "Melissa pareceu surpresa e agradecida pela ajuda."
+        },
+        "next": "m2_melissa_evasion"
+      },
+      {
+        "text": "Alguém esbarrou em você de propósito?",
+        "effect": {
+          "suspicion": 10,
+          "prompt": "Melissa hesitou por um segundo."
+        },
+        "next": "m2_melissa_defensive"
+      }
+    ]
+  },
+  "m2_melissa_evasion": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Está tudo bem, sério. Só estou meio distraída hoje. Muito obrigada pela ajuda, Rebecca... de verdade.",
+    "missionAdvance": 2,
+    "choices": []
+  },
+  "m2_melissa_defensive": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Não, ninguém! Foi só falta de atenção minha. Não precisa se preocupar, está tudo em ordem.",
+    "missionAdvance": 2,
+    "choices": []
+  },
+  "m2_madison_snark": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Nossa, Melissa... sempre tão estabanada. Se você cuidasse do seu material como cuida de ficar no nosso caminho, nada caía.",
+    "choices": [
+      {
+        "text": "Foi um acidente comum, Clara. Qualquer uma pode derrubar um caderno.",
+        "effect": {
+          "trust": 10,
+          "suspicion": 10
+        },
+        "next": "m2_madison_reply"
+      }
+    ]
+  },
+  "m2_madison_reply": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Só estou dando um toque amigável, Rebecca. 'Meninas apoiam meninas', afinal. Não precisa levar tudo a ferro e fogo.",
+    "choices": []
+  },
+  "m3_chloe_art": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "E aí, Rebecca! Veio buscar as tintas para o painel do festival? Estão na bancada do canto. A gente estava justamente definindo as duplas.",
+    "choices": [
+      {
+        "text": "Perfeito. Quem mais vai ajudar na decoração? A Melissa já tem equipe?",
+        "effect": {
+          "trust": 5,
+          "prompt": "Sophia trocou um olhar rápido com Clara."
+        },
+        "next": "m3_chloe_whisper"
+      },
+      {
+        "text": "Vou levar a caixa para a sala do conselho agora mesmo.",
+        "next": "m3_chloe_carry"
+      }
+    ]
+  },
+  "m3_chloe_whisper": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Ah... a Melissa? Não sei, ela disse que não curte muito trabalho em equipe. Acho que ela prefere ficar no canto dela.",
+    "choices": [
+      {
+        "text": "Entendi... vou levar as tintas para a Clara no Conselho.",
+        "next": "m3_chloe_carry"
+      }
+    ]
+  },
+  "m3_chloe_carry": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Leva lá para o Conselho, por favor. A Clara já está esperando.",
+    "choices": []
+  },
+  "m3_madison_council": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Obrigada pelas tintas, Rebecca. As cores ficaram impecáveis. Organização impecável é o que faz a Saint Claire brilhar.",
+    "choices": [
+      {
+        "text": "Aqui estão. Clara, vocês conversaram com a Melissa sobre participar do comitê?",
+        "effect": {
+          "suspicion": 15,
+          "prompt": "Clara manteve um sorriso impecável, porém rígido."
+        },
+        "next": "m3_madison_freeze"
+      },
+      {
+        "text": "Tudo pronto por aqui. Se precisarem de mais algo, me avise.",
+        "missionAdvance": 3,
+        "choices": []
+      }
+    ]
+  },
+  "m3_madison_freeze": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "A Melissa tem o tempo dela, Rebecca. Nem todas as alunas se encaixam no ritmo do conselho, entende? Vamos focar no que realmente importa.",
+    "missionAdvance": 3,
+    "choices": []
+  },
+  "m4_paper_clue": {
+    "speaker": "Rebecca",
+    "avatar": "static/images/avatars/rebecca.png",
+    "text": "Um papel amassado caído ao lado do armário 47... Está escrito: 'Ninguém quer você no grupo, por que continua insistindo?'. Não há assinatura, mas as palavras transmitem uma crueldade deliberada.",
+    "choices": [
+      {
+        "text": "Guardar o papel com cuidado no diário investigativo.",
+        "next": "m4_melissa_approaches"
+      }
+    ]
+  },
+  "m4_melissa_approaches": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Rebecca...? O que você... o que é esse papel aí na sua mão?",
+    "choices": [
+      {
+        "text": "Encontrei no chão. Alguém escreveu coisas bem pesadas aqui... você sabe de quem é?",
+        "effect": {
+          "trust": 10,
+          "prompt": "Melissa ficou visivelmente pálida ao reconhecer o bilhete."
+        },
+        "next": "m4_melissa_nervous"
+      },
+      {
+        "text": "Você parece assustada, Melissa. Esse papel foi jogado para você?",
+        "effect": {
+          "trust": 15,
+          "friendship": 10
+        },
+        "next": "m4_melissa_plea"
+      }
+    ]
+  },
+  "m4_melissa_nervous": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Eu... não tenho ideia! É só besteira que o pessoal joga fora. Por favor, Rebecca... não perde tempo com isso. É sério, não se preocupe.",
+    "choices": [
+      {
+        "text": "Se você diz... mas se precisar desabafar, estou aqui.",
+        "next": "m4_deliver_sam"
+      }
+    ]
+  },
+  "m4_melissa_plea": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Por favor, Rebecca, joga isso fora... Se começarem a falar disso pela escola, só vai ficar pior. Eu tenho que ir agora...",
+    "choices": [
+      {
+        "text": "Eu guardo comigo. Preciso entregar um aviso para a Sam logo adiante.",
+        "next": "m4_deliver_sam"
+      }
+    ]
+  },
+  "m4_deliver_sam": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Ah, Rebecca! O comunicado do conselho? Excelente, já vou anexar ao diário de classe. Muito obrigada pela ajuda.",
+    "missionAdvance": 4,
+    "choices": []
+  },
+  "m5_science_intro": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Meninas, temos a atividade prática de química hoje em duplas. Por favor, organizem as bancadas.",
+    "choices": [
+      {
+        "text": "Observar como estão se dividindo as duplas.",
+        "next": "m5_lab_conflict"
+      }
+    ]
+  },
+  "m5_lab_conflict": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Sinceramente, Melissa... essa sua hipótese não faz o menor sentido. Se a gente seguir sua ideia, o experimento vai ser um fiasco total.",
+    "choices": [
+      {
+        "text": "A proposta da Melissa faz sentido sim, Clara. Está no capítulo 4 do livro.",
+        "effect": {
+          "trust": 20,
+          "friendship": 15,
+          "prompt": "Você se posicionou em favor de Melissa."
+        },
+        "next": "m5_chloe_mock"
+      },
+      {
+        "text": "Vocês podem testar as duas hipóteses sem precisar menosprezar ninguém.",
+        "effect": {
+          "trust": 15
+        },
+        "next": "m5_chloe_mock"
+      }
+    ]
+  },
+  "m5_chloe_mock": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "(Risinhos) Ah, claro... a defensora oficial. A gente só estava sendo realista. Se a Melissa não aguenta críticas, talvez devesse trabalhar sozinha mesmo.",
+    "choices": [
+      {
+        "text": "Olhar para Melissa para ver como ela reage.",
+        "next": "m5_melissa_gives_up"
+      }
+    ]
+  },
+  "m5_melissa_gives_up": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "(Sorriso sem graça) Tudo bem... não tem problema. Eu realmente prefiro fazer as anotações sozinha na bancada do fundo.",
+    "missionAdvance": 5,
+    "choices": []
+  },
+  "m6_study_melissa": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "(Melissa está sentada em um banco isolado, com os olhos vermelhos e a cabeça baixa entre as mãos)",
+    "choices": [
+      {
+        "text": "Melissa... você está aqui sozinha. O que está acontecendo de verdade?",
+        "effect": {
+          "trust": 20,
+          "friendship": 20,
+          "prompt": "Melissa sentiu o tom genuíno e acolhedor de Rebecca."
+        },
+        "next": "m6_melissa_hesitation"
+      },
+      {
+        "text": "Eu vi o que aconteceu no laboratório e ouvi os comentários. Você não precisa fingir pra mim.",
+        "effect": {
+          "trust": 25,
+          "friendship": 20
+        },
+        "next": "m6_melissa_hesitation"
+      }
+    ]
+  },
+  "m6_melissa_hesitation": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Rebecca... eu... eu queria tanto poder falar. Mas você não sabe como elas são quando ninguém está olhando. Se eu abrir a boca, elas vão transformar cada dia meu aqui num inferno ainda maior...",
+    "choices": [
+      {
+        "text": "Você não está sozinha, Melissa. Elas não têm o direito de te tratar assim.",
+        "effect": {
+          "trust": 15
+        },
+        "next": "m6_melissa_fear"
+      }
+    ]
+  },
+  "m6_melissa_fear": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Por favor... me deixa aqui um instante. Só preciso respirar um pouco. Obrigada por se importar, Rebecca... de verdade.",
+    "missionAdvance": 6,
+    "choices": []
+  },
+  "m7_corridor_walk": {
+    "speaker": "Rebecca",
+    "avatar": "static/images/avatars/rebecca.png",
+    "text": "Estou com a pasta de atividades para entregar para a Melissa. O corredor parece tranquilo à primeira vista, mas ouço vozes abafadas perto do mezanino da escadaria...",
+    "choices": [
+      {
+        "text": "Avançar silenciosamente em direção à escadaria.",
+        "next": "m7_confrontation_trigger"
+      }
+    ]
+  },
+  "m7_confrontation_trigger": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Vai fazer o quê, Melissa? Chorar de novo? Contar para alguém? Você nunca tem coragem de falar nada mesmo.",
+    "choices": [
+      {
+        "text": "Observar mais um segundo antes de agir.",
+        "next": "m7_chloe_laugh"
+      },
+      {
+        "text": "Intervir imediatamente e se colocar entre elas!",
+        "next": "m7_rebecca_intervenes"
+      }
+    ]
+  },
+  "m7_chloe_laugh": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "(Risadas) Pois é! Olha a cara dela, Clara. Ninguém se importa se você sumir do grupo. Nem sei por que você ainda se dá ao trabalho de vir.",
+    "choices": [
+      {
+        "text": "Dar um passo à frente com firmeza e interromper agora mesmo!",
+        "next": "m7_rebecca_intervenes"
+      }
+    ]
+  },
+  "m7_rebecca_intervenes": {
+    "speaker": "Rebecca",
+    "avatar": "static/images/avatars/rebecca.png",
+    "text": "Já chega! O que vocês estão fazendo é errado. Não importa se vocês acham engraçado ou se dizem que é brincadeira. A Melissa está claramente desconfortável, e vocês precisam parar.",
+    "choices": [
+      {
+        "text": "Continuar encarando Clara e Sophia com firmeza.",
+        "next": "m7_madison_excuse"
+      }
+    ]
+  },
+  "m7_madison_excuse": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Você não sabe de nada, Rebecca. A gente só está brincando! Agora você virou a defensora da moral?",
+    "choices": [
+      {
+        "text": "'Brincadeira é quando todo mundo está se divertindo. Humilhar alguém e continuar depois que a pessoa pede para parar não é brincadeira.'",
+        "effect": {
+          "trust": 30,
+          "prompt": "Suas palavras atingiram as agressoras com precisão."
+        },
+        "next": "m7_chloe_excuse"
+      }
+    ]
+  },
+  "m7_chloe_excuse": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Ela nunca reclamou antes! Por que você está criando esse escândalo todo?",
+    "choices": [
+      {
+        "text": "'Isso não significa que ela gostava. Significa que vocês nunca pararam para ouvir.'",
+        "effect": {
+          "trust": 30,
+          "prompt": "Sophia e Clara ficaram sem resposta."
+        },
+        "next": "m7_bullies_retreat"
+      }
+    ]
+  },
+  "m7_bullies_retreat": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Tsc... Patético. Vamos embora, Sophia. Não vale a pena perder tempo com gente que não entende nada.",
+    "choices": [
+      {
+        "text": "Esperar Clara e Sophia se afastarem e virar para Melissa.",
+        "next": "m7_melissa_relief"
+      }
+    ]
+  },
+  "m7_melissa_relief": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Obrigada por ter feito aquilo... Eu... eu não sabia mais o que fazer.",
+    "choices": [
+      {
+        "text": "Eu percebi que tinha alguma coisa errada há algum tempo. Só não entendia exatamente o que estava acontecendo.",
+        "next": "m7_melissa_confession_1"
+      }
+    ]
+  },
+  "m7_melissa_confession_1": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "(Melissa respira fundo, com lágrimas nos olhos) Isso acontece há muito tempo. No começo, eram só comentários... Depois, elas começaram a me excluir, rir de mim e fazer coisas para me deixar desconfortável. Eu sempre achei que, se ignorasse, uma hora elas iam parar.",
+    "choices": [
+      {
+        "text": "Escutar atentamente com acolhimento, sem interromper.",
+        "next": "m7_melissa_confession_2"
+      }
+    ]
+  },
+  "m7_melissa_confession_2": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Eu queria falar com alguém, mas tinha medo de que ficasse pior. Também tinha medo de ninguém acreditar em mim. Como eu nunca conseguia responder na hora, parecia que elas podiam fazer o que quisessem.",
+    "choices": [
+      {
+        "text": "Continuar segurando a mão de Melissa e demonstrando apoio.",
+        "next": "m7_melissa_confession_3"
+      }
+    ]
+  },
+  "m7_melissa_confession_3": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Eu sei que deveria ter falado antes, mas não conseguia. E hoje... quando você apareceu, eu fiquei feliz porque finalmente alguém percebeu que eu não estava bem.",
+    "choices": [
+      {
+        "text": "'Você não precisava ter conseguido enfrentar tudo sozinha. O que elas fizeram não foi culpa sua.'",
+        "effect": {
+          "trust": 40,
+          "friendship": 50,
+          "prompt": "Um vínculo profundo de confiança e apoio verdadeiro se formou."
+        },
+        "next": "m7_melissa_comfort"
+      }
+    ]
+  },
+  "m7_melissa_comfort": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Obrigada, Rebecca. Pela primeira vez em meses sinto que posso respirar. Do que você acha que eu preciso agora para dar o próximo passo?",
+    "missionAdvance": 7,
+    "choices": []
+  },
+  "m8_start_talk": {
+    "speaker": "Rebecca",
+    "avatar": "static/images/avatars/rebecca.png",
+    "text": "Melissa, como você está se sentindo agora? Nós duas podemos ir juntas conversar com a Sra. Paola na sala de orientação.",
+    "choices": [
+      {
+        "text": "Organizar os fatos com calma para você não se sentir pressionada ao contar.",
+        "effect": {
+          "trust": 20,
+          "friendship": 20
+        },
+        "next": "m8_melissa_ready"
+      },
+      {
+        "text": "Se você preferir, eu começo falando e você complementa quando se sentir segura.",
+        "effect": {
+          "trust": 25,
+          "friendship": 20
+        },
+        "next": "m8_melissa_ready"
+      }
+    ]
+  },
+  "m8_melissa_ready": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Saber que você está ao meu lado muda tudo, Rebecca. Eu estou pronta. Vamos até a sala da Sra. Paola juntas.",
+    "choices": [
+      {
+        "text": "Caminhar com Melissa até o gabinete da orientação.",
+        "next": "m8_paola_report"
+      }
+    ]
+  },
+  "m8_paola_report": {
+    "speaker": "Professora",
+    "avatar": "static/images/avatars/professora.png",
+    "text": "Meninas, entrem, por favor. O que aconteceu? Vejo nos olhos de vocês que é algo muito sério.",
+    "choices": [
+      {
+        "text": "Relatar com detalhes a intimidação de Clara e Sophia e apresentar as anotações do diário.",
+        "effect": {
+          "trust": 30,
+          "prompt": "A Sra. Paola ouviu cada palavra com máxima atenção e seriedade."
+        },
+        "next": "m8_paola_decision"
+      }
+    ]
+  },
+  "m8_paola_decision": {
+    "speaker": "Professora",
+    "avatar": "static/images/avatars/professora.png",
+    "text": "Melissa... eu sinto muito por você ter passado por tudo isso calada. O lema desta escola não é uma frase decorativa de parede. Meninas apoiam meninas de verdade quando há respeito e segurança. Eu vou abrir um processo disciplinar formal e garantir que você esteja plenamente protegida.",
+    "choices": [
+      {
+        "text": "Agradecer à professora e acompanhar Melissa de volta ao corredor.",
+        "next": "m8_ending_corridor"
+      }
+    ]
+  },
+  "m8_ending_corridor": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Rebecca... quando olhei os murais hoje de manhã, eu sentia vergonha e solidão. Agora eu sei que apoiar alguém não é consertar tudo num passe de mágica, mas sim estar junto e não deixar ninguém no escuro.",
+    "choices": [
+      {
+        "text": "Sorrir e caminhar juntas pelo corredor da Academia Saint Claire.",
+        "missionAdvance": 8,
+        "choices": []
+      }
+    ]
+  },
+  "m1_sam_intro": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Bom dia, Rebecca! Não se esqueça de levar a pasta com os relatórios curriculares para a mesa da Professora na Sala de Literatura.",
+    "choices": [
+      {
+        "text": "Pode deixar, Clara. Já estou a caminho da Biblioteca e Literatura.",
+        "effect": {
+          "friendship": 5
+        },
+        "next": null
+      }
+    ]
+  },
+  "m1_sam_classroom": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Olha só, Rebecca... Sempre a aluna prestativa, correndo com pastas para a diretoria. Se quer um conselho de graça: repare menos nas notas do mural e mais na cara de pânico da Melissa hoje de manhã.",
+    "choices": [
+      {
+        "text": "O que aconteceu com a Melissa, Sam? Você viu alguma coisa?",
+        "next": "m1_sam_classroom_detail"
+      },
+      {
+        "text": "Só estou cumprindo minhas tarefas, Sam.",
+        "next": "m1_sam_classroom_ironic"
+      }
+    ]
+  },
+  "m1_sam_classroom_detail": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Não 'vi' nada que a diretoria chamaria de crime... Mas quando o professor de história virou as costas, vi a Sophia e outras empurrarem o estojo dela pro lixo. Melissa nem reclamou. Só abaixou a cabeça. Ninguém aqui é tão inocente quanto a farda parece indicar.",
+    "choices": [
+      {
+        "text": "Isso é sério... Obrigada por me avisar, Sam.",
+        "effect": {
+          "trust": 10
+        },
+        "next": null
+      }
+    ]
+  },
+  "m1_sam_classroom_ironic": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Claro, obediência cega é a especialidade da Saint Claire. Só não diga que não avisei quando o teatro da 'irmandade perfeita' começar a rachar.",
+    "choices": []
+  },
+  "m4_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Achou aquele papel no chão perto dos armários, Rebecca? Letra caprichada, mas palavras venenosas. As queridinhas do colégio sabem exatamente onde bater sem deixar hematoma.",
+    "choices": [
+      {
+        "text": "Você sabe quem escreveu aquilo contra a Melissa?",
+        "next": "m4_sam_hallway_clue"
+      },
+      {
+        "text": "Isso passou dos limites. Preciso fazer algo a respeito.",
+        "next": "m4_sam_hallway_support"
+      }
+    ]
+  },
+  "m4_sam_hallway_clue": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Não sou detetive particular, Rebecca. Mas repare em quem sempre ri baixinho no fundo da sala ou finge que não escuta quando a Melissa pede ajuda. O problema não é um bilhete; é o silêncio confortável de todo mundo em volta quando os professores não estão olhando.",
+    "choices": [
+      {
+        "text": "Vou ficar atenta. Melissa não vai passar por isso sozinha.",
+        "effect": {
+          "trust": 15
+        },
+        "next": null
+      }
+    ]
+  },
+  "m4_sam_hallway_support": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Boa sorte com isso. A direção prefere varrer a sujeira para debaixo do tapete a admitir que a Saint Claire tem alunas cruéis. Se for falar com os professores, é bom levar fatos incontestáveis.",
+    "choices": []
+  },
+  "m6_sam_study": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "A Melissa parece cada vez mais isolada... Dá para ver de longe o peso que ela está carregando. Se alguém não intervir logo, as coisas vão fugir totalmente do controle.",
+    "choices": [
+      {
+        "text": "Estou juntando o que descobri para conversar com ela e com a professora.",
+        "effect": {
+          "trust": 10
+        },
+        "next": null
+      }
+    ]
+  },
+  "m1_sophia_library": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Oi, Rebecca! A Professora está na mesa principal revisando os planejamentos da semana. Se você veio entregar os relatórios da 2-B, ela já está aguardando.",
+    "choices": []
+  },
+  "m1_melissa_hallway": {
+    "speaker": "Melissa",
+    "avatar": "static/images/avatars/melissa.png",
+    "text": "Ah... bom dia, Rebecca. Só estou organizando os livros no armário antes do segundo tempo começar... Tomara que o dia seja tranquilo.",
+    "choices": []
+  },
+  "m2_clara_classroom": {
+    "speaker": "Clara",
+    "avatar": "static/images/avatars/clara.png",
+    "text": "Rebecca, se passar pela biblioteca, fique atenta. A Melissa parecia bem nervosa e acho que deixou cair algumas anotações importantes no chão.",
+    "choices": []
+  },
+  "m2_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Vi a Melissa saindo apressada da biblioteca agora há pouco. Ela parecia bem abalada... Mas claro, as garotas populares fingem que não veem nada.",
+    "choices": []
+  },
+  "m3_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Preparativos para o festival? Boa sorte com o comitê. As preferidas da diretoria só distribuem as tarefas pesadas pras alunas que não têm voz.",
+    "choices": []
+  },
+  "m5_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "A turma adora deixar a Melissa isolada na divisão das duplas de laboratório. E claro, os professores fingem que é tudo normal.",
+    "choices": []
+  },
+  "m7_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Ouvi uma movimentação pesada perto da escadaria... Dessa vez passaram de todos os limites, Rebecca. Não deixe que façam a Melissa se calar.",
+    "choices": []
+  },
+  "m8_sam_hallway": {
+    "speaker": "Sam",
+    "avatar": "static/images/avatars/sam.png",
+    "text": "Fez muito bem em levar a Melissa até a orientação. Às vezes, ter alguém de verdade ao nosso lado é a única coisa que faz a diferença.",
+    "choices": []
+  },
+  "m2_valery_deliver": {
+    "speaker": "Sophia",
+    "avatar": "static/images/avatars/sophia.png",
+    "text": "Rebecca! Você encontrou o meu caderno azul! Muito obrigada, eu estava desesperada achando que tinha perdido todas as anotações do seminário... Você viu como a Melissa parecia abalada mais cedo? Fiquei preocupada com ela.",
+    "missionAdvance": 2,
+    "choices": [
+      {
+        "text": "Fico feliz em ajudar, Sophia. Também reparei que a Melissa parecia desconfortável...",
+        "effect": {
+          "trust": 10,
+          "friendship": 10
+        },
+        "next": null
+      }
+    ]
+  }
+}

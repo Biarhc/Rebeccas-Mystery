@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E1A"/>
+      <stop offset="60%" stop-color="#2C1B2F"/>
+      <stop offset="100%" stop-color="#00030E"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C1B2F"/>
+      <stop offset="100%" stop-color="#00030E"/>
+    </linearGradient>
+    <linearGradient id="windowLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B47A9A" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0E1A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Classroom Walls -->
+  <rect width="1920" height="720" fill="url(#wallGrad)"/>
+  
+  <!-- Wooden Parquet Floor -->
+  <polygon points="0,720 1920,720 1920,1080 0,1080" fill="url(#floorGrad)"/>
+
+  <!-- High Gothic Windows on the Left -->
+  <g fill="#00030E" stroke="#5E3A5C" stroke-width="6">
+    <path d="M120,100 A80,80 0 0,1 280,100 L280,600 L120,600 Z" />
+    <path d="M340,100 A80,80 0 0,1 500,100 L500,600 L340,600 Z" />
+  </g>
+
+  <!-- Window Panes & Rain Stream Silhouette -->
+  <g stroke="#2C1B2F" stroke-width="3">
+    <line x1="200" y1="20" x2="200" y2="600" />
+    <line x1="120" y1="220" x2="280" y2="220" />
+    <line x1="120" y1="400" x2="280" y2="400" />
+
+    <line x1="420" y1="20" x2="420" y2="600" />
+    <line x1="340" y1="220" x2="500" y2="220" />
+    <line x1="340" y1="400" x2="500" y2="400" />
+  </g>
+
+  <!-- Moody God Rays from Window -->
+  <polygon points="120,100 500,600 1300,1080 300,1080" fill="url(#windowLight)"/>
+
+  <!-- Blackboard / Chalkboard in center -->
+  <rect x="720" y="160" width="800" height="340" rx="8" fill="#060812" stroke="#5E3A5C" stroke-width="8"/>
+  <!-- Chalk Text Sketch -->
+  <text x="760" y="240" fill="#B47A9A" font-family="'Playfair Display', serif" font-size="28" opacity="0.6">Academia Saint Claire — 2º Ano B</text>
+  <text x="760" y="290" fill="#F3E9EC" font-family="monospace" font-size="20" opacity="0.4">"Sororidade, Virtude e Excelência"</text>
+
+  <!-- Notice Board on Right -->
+  <rect x="1580" y="200" width="260" height="320" rx="4" fill="#2C1B2F" stroke="#B47A9A" stroke-width="4"/>
+  <!-- Pinned Paper on board -->
+  <rect x="1620" y="240" width="180" height="220" fill="#F3E9EC" opacity="0.85" rx="2"/>
+  <rect x="1630" y="260" width="160" height="12" fill="#5E3A5C" />
+  <rect x="1630" y="290" width="130" height="8" fill="#2C1B2F" />
+  <rect x="1630" y="310" width="150" height="8" fill="#2C1B2F" />
+
+  <!-- Desks and Chairs Silhouettes -->
+  <!-- Left/Front Desks -->
+  <rect x="240" y="660" width="340" height="180" rx="6" fill="#0B0E1A" stroke="#5E3A5C" stroke-width="3"/>
+  <!-- Rebecca's Desk highlight -->
+  <rect x="250" y="670" width="320" height="20" fill="#2C1B2F"/>
+  <circle cx="280" cy="710" r="14" fill="#B47A9A" opacity="0.4"/>
+
+  <!-- Center Desks -->
+  <rect x="740" y="660" width="340" height="180" rx="6" fill="#0B0E1A" stroke="#5E3A5C" stroke-width="3"/>
+  <rect x="1240" y="660" width="340" height="180" rx="6" fill="#0B0E1A" stroke="#5E3A5C" stroke-width="3"/>
+</svg>

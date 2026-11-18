@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://clueobj01"]
+
+[ext_resource type="Script" path="res://scripts/interactables/clue_object.gd" id="1_clue"]
+[ext_resource type="Material" path="res://assets/materials/paper_note.tres" id="2_mat"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_01"]
+size = Vector3(0.5, 0.4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_01"]
+size = Vector3(0.35, 0.04, 0.25)
+
+[node name="ClueObject" type="StaticBody3D" groups=["interactables"]]
+collision_layer = 3
+collision_mask = 0
+script = ExtResource("1_clue")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_01")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_01")
+surface_material_override/0 = ExtResource("2_mat")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+light_color = Color(0.953, 0.914, 0.925, 1)
+light_energy = 0.5
+omni_range = 1.2
+omni_attenuation = 2.0

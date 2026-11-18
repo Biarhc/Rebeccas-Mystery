@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfgoldbrass01"]
+
+[resource]
+resource_name = "gold_brass"
+albedo_color = Color(0.706, 0.478, 0.604, 1.0)
+metallic = 0.8
+roughness = 0.3
+rim_enabled = true
+rim = 0.5

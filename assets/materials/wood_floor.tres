@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfwoodfloor01"]
+
+[resource]
+resource_name = "wood_floor"
+albedo_color = Color(0.172, 0.106, 0.184, 1.0)
+metallic = 0.1
+roughness = 0.45
+clearcoat_enabled = true
+clearcoat = 0.3
+uv1_scale = Vector3(4, 4, 4)

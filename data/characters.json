@@ -1,0 +1,77 @@
+[
+  {
+    "id": "rebecca",
+    "name": "Rebecca",
+    "role": "Protagonista",
+    "age": 16,
+    "description": "Estudante atenta e observadora da Academia Saint Claire. Ao realizar tarefas diárias para a escola, começa a notar pequenos e desconfortáveis sinais ao redor de Melissa.",
+    "avatar": "static/images/avatars/rebecca.png",
+    "status": "Em busca da verdade na Saint Claire"
+  },
+  {
+    "id": "melissa",
+    "name": "Melissa",
+    "role": "Colega de Escola",
+    "age": 16,
+    "description": "Reservada e gentil, tenta manter o sorriso e fingir que está tudo bem mesmo quando as coisas parecem pesar sobre seus ombros. Tem vergonha e medo de falar sobre o que passa.",
+    "avatar": "static/images/avatars/melissa.png",
+    "status": "Tentando passar despercebida"
+  },
+  {
+    "id": "clara",
+    "name": "Clara",
+    "role": "A garota central",
+    "age": 17,
+    "description": "Artística, profunda, empática, reservada e perfeccionista. Amava pintura em aquarela e cadernos de poesia.",
+    "avatar": "static/images/avatars/clara.png",
+    "secret": "Descobriu boatos e guardava anotações importantes sobre o que ocorria na escola.",
+    "relationships": {
+      "trust": 25,
+      "friendship": 20,
+      "suspicion": 30
+    }
+  },
+  {
+    "id": "sophia",
+    "name": "Sophia",
+    "role": "Melhor amiga",
+    "age": 17,
+    "description": "Perfeccionista, organizada, leal, porém ansiosa e com tendência a evitar conflitos para manter as aparências.",
+    "avatar": "static/images/avatars/sophia.png",
+    "secret": "Sabe mais do que aparenta sobre os desentendimentos entre as alunas.",
+    "relationships": {
+      "trust": 25,
+      "friendship": 20,
+      "suspicion": 20
+    }
+  },
+  {
+    "id": "professora",
+    "name": "Professora",
+    "role": "Professora & Orientadora Pedagógica",
+    "age": 38,
+    "description": "Professora respeitada na Academia Saint Claire. Exige dedicação e disciplina, mas valoriza acima de tudo alunas que se apoiam com sinceridade.",
+    "avatar": "static/images/avatars/professora.png",
+    "secret": "Preocupa-se com o cumprimento das tarefas da academia, mas está aberta a agir com firmeza.",
+    "relationships": {
+      "trust": 30,
+      "friendship": 15,
+      "suspicion": 15
+    }
+  },
+  {
+    "id": "sam",
+    "name": "Sam",
+    "role": "Estudante da Saint Claire",
+    "age": 16,
+    "description": "Inteligente, observadora e reservada. Percebe os detalhes que a maioria ignora e desconfia da falsa união da Saint Claire.",
+    "avatar": "static/images/avatars/sam.png",
+    "secret": "Costuma reparar nas atitudes das alunas quando os professores não estão por perto.",
+    "status": "Observando os corredores",
+    "relationships": {
+      "trust": 20,
+      "friendship": 20,
+      "suspicion": 15
+    }
+  }
+]

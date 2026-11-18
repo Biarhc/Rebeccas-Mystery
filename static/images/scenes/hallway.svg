@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hallwayPersp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00030E"/>
+      <stop offset="50%" stop-color="#0B0E1A"/>
+      <stop offset="100%" stop-color="#2C1B2F"/>
+    </linearGradient>
+    <linearGradient id="lockersGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C1B2F"/>
+      <stop offset="100%" stop-color="#0B0E1A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ceiling and Back Wall -->
+  <rect width="1920" height="1080" fill="#00030E"/>
+  
+  <!-- Perspective Corridor Floor -->
+  <polygon points="400,600 1520,600 1920,1080 0,1080" fill="#0B0E1A" stroke="#2C1B2F" stroke-width="2"/>
+
+  <!-- Tiled floor lines -->
+  <line x1="960" y1="600" x2="960" y2="1080" stroke="#2C1B2F" stroke-width="4"/>
+  <line x1="780" y1="600" x2="520" y2="1080" stroke="#2C1B2F" stroke-width="3"/>
+  <line x1="1140" y1="600" x2="1400" y2="1080" stroke="#2C1B2F" stroke-width="3"/>
+
+  <!-- Left Side Lockers in Perspective -->
+  <polygon points="0,0 400,600 400,980 0,1080" fill="url(#lockersGrad)" stroke="#5E3A5C" stroke-width="4"/>
+  <!-- Lockers Vents & Numbers -->
+  <rect x="80" y="440" width="120" height="280" rx="4" fill="#0B0E1A" stroke="#B47A9A" stroke-width="2"/>
+  <text x="110" y="480" fill="#F3E9EC" font-family="monospace" font-size="22">#47</text>
+  <line x1="100" y1="510" x2="180" y2="510" stroke="#5E3A5C" stroke-width="2"/>
+  <line x1="100" y1="525" x2="180" y2="525" stroke="#5E3A5C" stroke-width="2"/>
+  <circle cx="180" cy="580" r="5" fill="#B47A9A"/>
+
+  <!-- Right Side Pillars & Trophy Cabinet -->
+  <polygon points="1920,0 1520,600 1520,980 1920,1080" fill="#0B0E1A" stroke="#5E3A5C" stroke-width="4"/>
+  <rect x="1560" y="380" width="220" height="360" rx="6" fill="#2C1B2F" stroke="#B47A9A" stroke-width="3"/>
+  <text x="1600" y="420" fill="#B47A9A" font-family="'Playfair Display', serif" font-size="20">MÉRITO ACADÊMICO</text>
+  <!-- Trophy Silhouette -->
+  <polygon points="1660,520 1700,520 1690,580 1670,580" fill="#F3E9EC" opacity="0.6"/>
+  <ellipse cx="1680" cy="510" rx="30" ry="15" fill="#F3E9EC" opacity="0.7"/>
+
+  <!-- Arch at the end of the Hallway -->
+  <path d="M800,600 A160,160 0 0,1 1120,600 L1120,600 L800,600 Z" fill="#2C1B2F" stroke="#5E3A5C" stroke-width="4"/>
+  <ellipse cx="960" cy="590" rx="140" ry="80" fill="#B47A9A" opacity="0.15"/>
+</svg>

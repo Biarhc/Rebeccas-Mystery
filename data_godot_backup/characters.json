@@ -1,0 +1,81 @@
+{
+  "rabecca": {
+    "name": "Rabecca",
+    "role": "Protagonista",
+    "age": 17,
+    "personality": "Observadora, inteligente, determinada, sensível e emocionalmente envolvida nos acontecimentos. Começa com medo da verdade, mas amadurece conforme investiga.",
+    "relation_to_clara": "Colega de turma e confidente silenciosa; sentia que algo estava errado mas não interveio a tempo.",
+    "secret": "Testemunhou a tragédia e misteriosamente retornou no tempo para tentar compreender e impedir o ocorrido.",
+    "motive_to_lie": "Não pode revelar que veio do futuro, sob o risco de ser considerada louca ou isolada.",
+    "speech_style": "Reflexiva, atenta aos detalhes, calma porém firme quando confrontada."
+  },
+  "clara": {
+    "name": "Clara Martins",
+    "role": "A garota central",
+    "age": 17,
+    "personality": "Artística, profunda, empática, reservada e perfeccionista. Amava pintura em aquarela e cadernos de poesia.",
+    "relation_to_clara": "A si mesma; uma jovem cheia de planos e sonhos que foi sufocada pelo silêncio e pela crueldade sutil.",
+    "relation_to_rebecca": "Enxergava em Rabecca alguém sincera, mas tinha medo de sobrecarregá-la com seus problemas.",
+    "secret": "Descobriu quem espalhou os boatos que arruinaram sua reputação e guardava um bilhete com a confissão.",
+    "motive_to_lie": "Escondia sua dor para proteger as poucas amizades que ainda acreditava ter.",
+    "speech_style": "Poética, doce, evasiva quando perguntada sobre si mesma."
+  },
+  "sophia": {
+    "name": "Sophia Leal",
+    "role": "Melhor amiga de Clara",
+    "age": 17,
+    "personality": "Perfeccionista, organizada, leal, porém ansiosa e com tendência a evitar conflitos para manter as aparências.",
+    "relation_to_clara": "Melhor amiga desde o primeiro ano; afastou-se nas últimas semanas por pressão do grupo.",
+    "relation_to_rebecca": "Respeita Rabecca, mas desconfia quando ela faz perguntas diretas demais.",
+    "secret": "Ignorou as mensagens desesperadas de Clara na véspera da tragédia por medo de ser excluída.",
+    "motive_to_lie": "Sentimento avassalador de culpa e pavor de que o colégio saiba de sua omissão.",
+    "speech_style": "Polida, defensiva quando pressionada, fala rápida."
+  },
+  "beatriz": {
+    "name": "Beatriz Ramos",
+    "role": "Amiga popular do grupo",
+    "age": 17,
+    "personality": "Carismática, comunicativa, vaidosa e controladora de reputação. Preocupa-se excessivamente com o status escolar.",
+    "relation_to_clara": "Amiga de longa data que entrou em atrito com Clara por conta de um segredo compartilhado.",
+    "relation_to_rebecca": "Condescendente, tenta desviar as conversas com simpatia superficial.",
+    "secret": "Foi quem rasgou o bilhete de confissão de Clara para evitar que seu próprio nome fosse envolvido.",
+    "motive_to_lie": "Preservar a imagem impecável de sua família e seu papel de líder estudantil.",
+    "speech_style": "Articulada, charmosa, persuasiva, sutilmente intimidadora."
+  },
+  "valentina": {
+    "name": "Valentina Rocha",
+    "avatar": "static/images/avatars/valentina.png",
+    "role": "Rival acadêmica de Clara",
+    "age": 17,
+    "personality": "Ambiciosa, fria na superfície, altamente pressionada pelos pais para conseguir a bolsa de artes.",
+    "relation_to_clara": "Foram melhores amigas na infância, mas tornaram-se rivais ferrenhas no último ano.",
+    "relation_to_rebecca": "Ácida e desconfiada, não suporta hipocrisia e odeia o lema da escola.",
+    "secret": "Ainda guarda uma foto antiga das duas e chorou escondida na biblioteca ao saber da tragédia.",
+    "motive_to_lie": "Orgulho ferido e medo de confessar que as acusações de plágio eram infundadas.",
+    "speech_style": "Sarcástica, direta, impaciente, esconde vulnerabilidade sob ironia."
+  },
+  "helena": {
+    "name": "Helena Prado",
+    "avatar": "static/images/avatars/helena.png",
+    "role": "A observadora misteriosa",
+    "age": 16,
+    "personality": "Quieta, solitária, extremamente observadora. Sabe tudo o que se passa nos corredores e grava conversas.",
+    "relation_to_clara": "Observava Clara de longe e tentou deixar avisos anônimos.",
+    "relation_to_rebecca": "Curiosa sobre o retorno de Rabecca, parece perceber que algo mudou na protagonista.",
+    "secret": "Possui mensagens e bilhetes originais que provam como o bullying contra Clara foi orquestrado.",
+    "motive_to_lie": "Medo de se tornar o próximo alvo de perseguição se falar abertamente.",
+    "speech_style": "Baixa, enigmática, precisa, usa pausas significativas."
+  },
+  "professora_elizabeth": {
+    "name": "Profª. Elizabeth Mendes",
+    "avatar": "static/images/avatars/elizabeth.png",
+    "role": "Professora de Literatura e Orientadora",
+    "age": 42,
+    "personality": "Educada, atenciosa mas sobrecarregada pelas normas rígidas da diretoria da Saint Claire.",
+    "relation_to_clara": "Elogiava os textos de Clara, mas não percebeu os pedidos de socorro escondidos nas entrelinhas.",
+    "relation_to_rabecca": "Tenta acolher Rabecca, mas insiste no discurso institucional de que 'está tudo bem'.",
+    "secret": "Recebeu um relatório anônimo de assédio moral semanas antes e arquivou por orientação da reitoria.",
+    "motive_to_lie": "Medo de perder o emprego e macular a reputação da tradicional academia.",
+    "speech_style": "Formal, professoral, compassiva mas presa à burocracia escolar."
+  }
+}

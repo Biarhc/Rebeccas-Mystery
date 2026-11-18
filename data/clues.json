@@ -1,0 +1,92 @@
+[
+  {
+    "id": "torn_note",
+    "name": "Papel Amassado Perto dos Armários",
+    "category": "Documento",
+    "icon": "note",
+    "description": "Um pedaço de papel amassado jogado no chão com comentários cruéis e anônimos: 'Ninguém quer você no grupo, por que continua insistindo?'. Não há nomes indicados.",
+    "dateFound": "Manhã na Saint Claire",
+    "location": "Corredor das Alunas",
+    "impact": "Indício sutil de que alguém está sendo alvo de perseguição verbal e exclusão."
+  },
+  {
+    "id": "student_guide",
+    "name": "Mural 'Meninas Apoiam Meninas'",
+    "category": "Institucional",
+    "icon": "book",
+    "description": "O lema da Academia em letras elegantes. Contrastando com o cartaz, algumas atitudes nos corredores parecem bem distantes dessa sororidade.",
+    "dateFound": "Manhã na Saint Claire",
+    "location": "Sala 2-B",
+    "impact": "Evidencia o descompasso entre o discurso oficial da escola e o comportamento real de certos grupos."
+  },
+  {
+    "id": "scattered_supplies",
+    "name": "Materiais Espalhados no Chão",
+    "category": "Observação",
+    "icon": "item",
+    "description": "Folhas de fichário e estojo espalhados perto das estantes, como se alguém tivesse sido esbarrada de propósito.",
+    "dateFound": "Manhã na Saint Claire",
+    "location": "Sala de Literatura (Biblioteca)",
+    "impact": "Melissa recolhia suas coisas com pressa e tentou disfarçar dizendo estar apenas distraída."
+  },
+  {
+    "id": "group_sheet",
+    "name": "Lista de Grupos de Trabalho",
+    "category": "Documento",
+    "icon": "book",
+    "description": "A lista de duplas da aula prática onde o nome de Melissa aparece isolado no rodapé com uma anotação: 'fará individualmente'.",
+    "dateFound": "Tarde na Saint Claire",
+    "location": "Laboratório de Ciências",
+    "impact": "Demonstra o padrão de isolamento imposto a Melissa durante atividades escolares."
+  },
+  {
+    "id": "whispered_silence",
+    "name": "Conversas Interrompidas",
+    "category": "Observação",
+    "icon": "note",
+    "description": "Sempre que Melissa ou Rebecca se aproximavam de Clara e Sophia, as risadas eram contidas e o assunto subitamente mudava.",
+    "dateFound": "Tarde na Saint Claire",
+    "location": "Corredor Norte & Ateliê",
+    "impact": "Indica a exclusão deliberada e a atmosfera velada de hostilidade."
+  },
+  {
+    "id": "evasive_answers",
+    "name": "Respostas Evasivas de Melissa",
+    "category": "Diálogo",
+    "icon": "note",
+    "description": "Melissa insiste: 'Está tudo bem, sério... não se preocupe'. Suas mãos trêmulas e o olhar esquivo sugerem o oposto.",
+    "dateFound": "Tarde na Saint Claire",
+    "location": "Sala de Estudos",
+    "impact": "O receio constante de Melissa em falar, por temer que a perseguição se agrave se alguém souber."
+  },
+  {
+    "id": "direct_witness",
+    "name": "Flagrante no Final do Corredor",
+    "category": "Testemunho Direto",
+    "icon": "camera",
+    "description": "Rebecca presencia Clara e Sophia encurralando Melissa com comentários humilhantes e risadas desdenhosas, zombando do fato de ela nunca reclamar.",
+    "dateFound": "Tarde na Saint Claire",
+    "location": "Escadaria Central — Mezanino",
+    "impact": "A confirmação definitiva do bullying: o padrão ambíguo finalmente se revela de forma explícita."
+  },
+  {
+    "id": "support_resolution",
+    "name": "Decisão de Apoio Mútuo",
+    "category": "Resolução",
+    "icon": "item",
+    "description": "Rebecca e Melissa decidem juntas levar os fatos até a direção, rompendo o ciclo do silêncio com coragem e acolhimento.",
+    "dateFound": "Fim de Tarde na Saint Claire",
+    "location": "Gabinete da Direção & Corredor",
+    "impact": "A certeza de que ninguém deve enfrentar o sofrimento sozinho."
+  },
+  {
+    "id": "blue_literature_notebook",
+    "name": "Caderno de Literatura Azul",
+    "category": "Cadernos e Documentos",
+    "icon": "note",
+    "description": "Caderno de anotações com capa azul deixado sobre a mesa central da biblioteca. Pertence a Sophia e contém notas de literatura e poesia preparadas para o seminário.",
+    "dateFound": "Manhã na Saint Claire",
+    "location": "Sala de Literatura (Mesa Central)",
+    "impact": "Prova de que Sophia esqueceu suas anotações e ponto de partida para conversar com ela sobre o que viu com Melissa."
+  }
+]
